@@ -1,0 +1,36 @@
+/* COLOR PALETTE USED
+
+    Background 1: Dark Purple   - #242582
+    Background 2:               - #553D67
+                                - #F64C72
+
+    Text:         Light Grey    - #99738E
+    Eye Catcher:  Blue          - #2F2FA2
+
+*/
+
+.jumbotron {
+    background-color: #0E0B16;
+}
+
+h1 {
+    text-align: center;
+}
+
+.row {
+    background-color: #0E0016; <!-- Light Grey -->
+}
+
+.container {
+    color: #E7DFDD;
+}
+
+.lead {
+    color: #E7DFDD
+}
+
+
+
+.navbar {
+    background-color: #4717F6;
+}
