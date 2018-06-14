@@ -1,0 +1,82 @@
+/* COLOR PALETTE USED
+
+    Background 1: Dark Purple   - #242582
+    Background 2:               - #553D67
+                                - #F64C72
+
+    Text:         Light Grey    - #99738E
+    Eye Catcher:  Blue          - #2F2FA2
+
+*/
+
+/* Decided to NOT add custom fonts atm */
+
+/*@font-face {
+    font-family: "palanquin";
+    src:    url("/css/fonts/palanquin/palanquin-regular.tff")
+            format('truetype');
+}
+
+@font-face {
+    font-family: "palanquin";
+    src:    url("/css/fonts/palanquin/palanquin-bold.tff")
+            format('truetype');
+    font-weight: bold;
+} */
+
+.jumbotron {
+    background-color: #0E0B16;
+}
+
+h1 {
+    text-align: center;
+}
+
+.row .jumbotron{
+    background-color: #E7DFDD; <!-- Light Grey -->
+}
+
+.container {
+    color:  #E7DFDD;
+}
+
+.lead {
+    color:  #E7DFDD;
+}
+
+.navbar {
+    background-color:   #4717F6;
+}
+
+#contact-us #panel-left h1 {
+    text-align: left;
+    font-size:  30px;
+}
+
+#contact-us h2 {
+    text-align: left;
+    font-size:  25px;
+}
+
+h1, h2, h3, h4 {
+    font-family: sans-serif;
+}
+
+
+#contact-us {
+    padding: 50px 20px;
+}
+
+#panel-right p{
+    font-size: 14px;
+}
+
+#panel-right h3{
+    font-size: 20px;
+}
+
+
+
+#panel-left h2 {
+    font-size: 20px;
+}
