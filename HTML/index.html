@@ -26,6 +26,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script type ="text/javascript" src="../JavaScript/animation.js"></script>
 </head>
 
 <body id="myPage">
@@ -96,10 +98,10 @@
 
     <!-- MAIN BANNER -->
 
-    <div class="jumbotron">
-        <div class="container">
+    <div class="jumbotron bg">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-lg-8" id="main">
                     <br><br>
 
                     <h1>Welcome to Titan</h1>
@@ -107,18 +109,20 @@
                         <br> More Information Text Text Text Text Text Text Text Text Text Text Text Text
                     </p>
                 </div>
+<!--
                 <div class="col-sm-4">
                     <br><br>
                     <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
                 </div>
+-->
             </div>
         </div>
     </div>
 
     <!-- Content 1: Popular Shirt Options -->
     <!-- Note: The <h1>'s are placeholders for images -->
-    <section id="popularShirt">
-        <div class="container">
+    <section class="popularShirt">
+        <div class="container content">
             <div class="row">
                 <div class="col-sm-4 col-xs-6">
                     <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
@@ -160,7 +164,7 @@
     </section>
 
     <!-- Content 2: User Reviews -->
-    <section id="reviews">
+    <section class="reviews">
         <div class="container">
             <div class="row">
                 <div class="col">
