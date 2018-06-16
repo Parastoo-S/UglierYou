@@ -26,6 +26,9 @@
 
 .jumbotron {
     background-color: #0E0B16;
+    height: 660px;
+    
+    
 }
 
 h1 {
@@ -33,13 +36,34 @@ h1 {
 }
 
 .row .jumbotron{
-    background-color: #E7DFDD; <!-- Light Grey -->
+    background-color: #E7DFDD;
+
+}
+
+#main{
+    display: none;
 }
 
 .container {
     color:  #E7DFDD;
 }
 
+.bg {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../Photos/graffiti_wall.jpg);
+    background-repeat: no-repeat; !important
+    background-attachment: scroll;
+    background-size: 100%; !important
+    background-size: cover;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+
+    
+}
 .lead {
     color:  #E7DFDD;
 }
@@ -50,7 +74,7 @@ h1 {
 
 #contact-us #panel-left h1 {
     text-align: left;
-    font-size:  30px;
+    font-size:  30px; 
 }
 
 #contact-us h2 {
