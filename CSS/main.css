@@ -28,7 +28,6 @@
     background-color: #0E0B16;
     height: 100%;
     
-    
 }
 
 h1 {
@@ -47,6 +46,12 @@ h1 {
 .container {
     color:  #E7DFDD;
 }
+
+.content{
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .logo{
     padding: 0;
     margin: 0;
@@ -74,11 +79,12 @@ h1 {
 .navbar {
 /*    background-color:   #4717F6;*/
 /*    background-color:rgba(63,191,155,0.5);*/
-    background-color:rgba(0,0,0,0.5);
+    background-color:transparent;
      padding-right: 5px;
     padding-left: 5px;
     margin-right: 0;
     margin-left: 0;
+    border-color: transparent;
 }
 
 #contact-us #panel-left h1 {
@@ -114,3 +120,7 @@ h1, h2, h3, h4 {
     font-size: 20px;
 }
 
+/*
+.popular{
+    background-color: antiquewhite;  
+}*/
