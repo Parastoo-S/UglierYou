@@ -11,14 +11,14 @@ $.getScript("../assets/scrollreveal-master/dist/scrollreveal.min.js", function()
     
 
     window.sr = new ScrollReveal(config)
-    var navbar = document.querySelector("nav.navbar").offsetTop;
+//    var navbar = document.querySelector("nav.navbar").offsetTop;
     window.sr = ScrollReveal({ reset: false });
-    sr.reveal('.shirt1',{ duration: 1000, delay: 50}, 50);
-    sr.reveal('.shirt2',{ duration: 1000, delay: 50}, 50);
+    sr.reveal('.cool',{ duration: 1000, delay: 50}, 50);
+    sr.reveal('.popular',{ duration: 1000, delay: 50}, 50);
     
 //    duration: 500;
 //    delay: 10;
-    sr.reveal('.reviews',{ duration: 3000, delay: 500}, 50);
+    sr.reveal('.reviews',{ duration: 2000, delay: 50}, 50);
     
 //    var crown = document.querySelector(".popularShirt")
 //      var demo  = document.querySelector(".shirt")
@@ -45,17 +45,17 @@ $.getScript("../assets/scrollreveal-master/dist/scrollreveal.min.js", function()
 //      }
     
 });
-
-$(window).scroll(function() {
-  $(".slideanim").each(function(){
-    var pos = $(this).offset().top;
-
-    var winTop = $(window).scrollTop();
-    if (pos < winTop + 600) {
-      $(this).addClass("slide");
-    }
-  });
-});
+ 
+//$(window).scroll(function() {
+//  $(".slideanim").each(function(){
+//    var pos = $(this).offset().top;
+//
+//    var winTop = $(window).scrollTop();
+//    if (pos < winTop + 600) {
+//      $(this).addClass("slide");
+//    }
+//  });
+//});
 
 $(document).ready(function () {
     $('#main').fadeIn(1000).removeClass('hidden');
