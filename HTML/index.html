@@ -20,12 +20,15 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/CSS/main.css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script type ="text/javascript" src="../JavaScript/animation.js"></script>
 </head>
 
 <body id="myPage">
@@ -59,7 +62,8 @@
     -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <a href="#" class="navbar-brand">MyWebsite</a>
+             
+            <a href="#" class="navbar-brand logo"><img src="../Photos/logo.png" height="auto" width="150px"></a>
 
             <button class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
                     <span class="icon-bar"></span>
@@ -96,10 +100,10 @@
 
     <!-- MAIN BANNER -->
 
-    <div class="jumbotron">
-        <div class="container">
+    <div class="jumbotron bg">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-md-2" id="main">
                     <br><br>
 
                     <h1>Welcome to Titan</h1>
@@ -107,44 +111,75 @@
                         <br> More Information Text Text Text Text Text Text Text Text Text Text Text Text
                     </p>
                 </div>
+<!--
                 <div class="col-sm-4">
                     <br><br>
                     <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
                 </div>
+-->
             </div>
         </div>
     </div>
 
     <!-- Content 1: Popular Shirt Options -->
     <!-- Note: The <h1>'s are placeholders for images -->
-    <section id="popularShirt">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-xs-6">
-                    <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
-                    <h1> Cool Shirt 1</h1>
+    <section class="popularShirt">
+        <div class="container-fluid cool content">
+            <div class="row cool">
+                <div class="col-sm-4 iteam-container">
+                    <img class="img-responsive" src="/Photos/shirtTest1.png" />
+                    <div class="description">
+<!--
+                        <h3 id="name"> Cool Shirt 1</h3>
+                        <p id="price">Price: $20</p>
+-->
+                        <h3> Cool Shirt 1</h3>
+                        <h4>Price: $20</h4>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
                 </div>
-                <div class="col-sm-4 col-xs-6">
-                    <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
-                    <h1> Cool Shirt 2</h1>
+                <div class="col-sm-4 iteam-container">
+                        <img class="img-responsive" src="/Photos/shirtTest1.png" />
+                    <div class="description">
+                        <h3> Cool Shirt 2</h3>
+                        <h4>Price: $20</h4>
+                    </div>
+                    
                 </div>
-                <div class="col-sm-4">
-                    <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
-                    <h1> Cool Shirt 3</h1>
+                <div class="col-sm-4 iteam-container">
+                    <img class="img-responsive" src="/Photos/shirtTest1.png" />
+                    <div class="description">
+                        <h3> Cool Shirt 3</h3>
+                        <h4>Price: $20</h4>
+                    </div>
                 </div>
+                
             </div>
-            <div class="row">
-                <div class="col-sm-4 col-xs-6">
-                    <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
-                    <h1> Popular Shirt 1</h1>
+        </div>
+        <div class="container-fluid pop">
+            <div class="row popular">
+                <div class="col-sm-4 iteam-container">
+                    <img class="img-responsive large" src="/Photos/10TypesOfPeople.jpg" />
+                    <div class="description">
+                        <h3> Popular Shirt 1</h3>
+                    </div>
                 </div>
-                <div class="col-sm-4 col-xs-6">
-                    <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
-                    <h1> Popular Shirt 2</h1>
+                <div class="col-sm-4 iteam-container">
+                    <img class="img-responsive large" src="/Photos/10TypesOfPeople.jpg" />
+                    <div class="description">
+                        <h3> Popular Shirt 2</h3>
+                    </div>
                 </div>
-                <div class="col-sm-4">
-                    <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
-                    <h1> Popular Shirt 3</h1>
+                <div class="col-sm-4 iteam-container">
+                    <img class="img-responsive large" src="/Photos/10TypesOfPeople.jpg" />
+                    <div class="description">
+                        <h3> Popular Shirt 3</h3>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -160,7 +195,7 @@
     </section>
 
     <!-- Content 2: User Reviews -->
-    <section id="reviews">
+    <section class="reviews">
         <div class="container">
             <div class="row">
                 <div class="col">

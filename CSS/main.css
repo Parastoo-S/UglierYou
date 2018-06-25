@@ -25,7 +25,9 @@
 } */
 
 .jumbotron {
-    background-color: #0E0B16;
+/*    background-color: #0E0B16;*/
+    height: 100%;
+    
 }
 
 h1 {
@@ -33,24 +35,70 @@ h1 {
 }
 
 .row .jumbotron{
-    background-color: #E7DFDD; <!-- Light Grey -->
+    background-color: #E7DFDD;
+
+}
+
+#main{
+    display: none;
 }
 
 .container {
     color:  #E7DFDD;
 }
 
+.content{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.logo{
+    padding: 0;
+    margin: 0;
+}
+.bg {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../Photos/city-street-background.jpg);
+    background-repeat: no-repeat; !important
+    background-attachment: scroll;
+    background-size: 100%; !important
+    background-size: cover;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+
+    
+}
 .lead {
     color:  #E7DFDD;
 }
+.checked {
+    color: orange;
+}
 
+.img-responsive{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
 .navbar {
-    background-color:   #4717F6;
+/*    background-color:   #4717F6;*/
+/*    background-color:rgba(63,191,155,0.5);*/
+    background-color:transparent;
+     padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 0;
+    margin-left: 0;
+    border-color: transparent;
 }
 
 #contact-us #panel-left h1 {
     text-align: left;
-    font-size:  30px;
+    font-size:  30px; 
 }
 
 #contact-us h2 {
@@ -61,8 +109,55 @@ h1 {
 h1, h2, h3, h4 {
     font-family: sans-serif;
 }
+.description{
+/*    padding-left: 10px;*/
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.iteam-container{
+    padding: 5px 5px 5px 5px;
+    
+/*    box-shadow: 5px 10px #B2B2B2;*/
+    
+}
+#name{
+    text-align: center;
+    font-size: 18px;
+}
 
+#price{
+    text-align: center;
+}
+
+div.container-fluid.cool{
+/*    background-color: antiquewhite;*/
+}
+div.container-fluid.pop{
+     background-color: #E1FFFF;
+}
+div.row.popular{
+   
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+img.large{
+    height: auto;
+    width: 75%;
+}
+/*
+
+div.row.popular{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: antiquewhite;
+}
+*/
 #contact-us {
     padding: 50px 20px;
 }
@@ -80,3 +175,8 @@ h1, h2, h3, h4 {
 #panel-left h2 {
     font-size: 20px;
 }
+
+/*
+.popular{
+    background-color: antiquewhite;  
+}*/
