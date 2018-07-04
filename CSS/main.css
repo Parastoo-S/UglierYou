@@ -24,11 +24,13 @@
     font-weight: bold;
 } */
 
+/*
 .jumbotron {
-/*    background-color: #0E0B16;*/
+    background-color: #0E0B16;
     height: 100%;
     
 }
+*/
 
 h1 {
     text-align: center;
@@ -57,10 +59,10 @@ h1 {
     margin: 0;
 }
 .bg {
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../Photos/city-street-background.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../Photos/BackgroundCompletelyErased2.png);
     background-repeat: no-repeat; !important
     background-attachment: scroll;
-    background-size: 100%; !important
+/*    background-size: 100%; !important*/
     background-size: cover;
     padding-right: 0;
     padding-left: 0;
@@ -69,7 +71,8 @@ h1 {
     margin-right: 0;
     margin-left: 0;
     text-align: center;
-
+/*    height: 100%;*/
+    height: 800px;
     
 }
 .lead {

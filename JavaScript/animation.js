@@ -66,7 +66,7 @@ $(document).ready(function () {
     window.onscroll = function() {
         if (window.pageYOffset > 0) {
             var opac = (window.pageYOffset / content);
-            document.getElementsByClassName("bg")[0].style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(../Photos/city-street-background.jpg) no-repeat";
+            document.getElementsByClassName("bg")[0].style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(../Photos/BackgroundCompletelyErased2.png) no-repeat";
             document.getElementsByClassName("bg")[0].style.backgroundSize = "100%";
 
         }
