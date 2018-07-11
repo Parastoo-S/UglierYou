@@ -76,10 +76,10 @@
 
 $.getScript("../assets/fabric.min.js", function() {
     var canvas = this.__canvas = new fabric.Canvas('c');
+    
     var imgObj;
     document.getElementById('uploadedImg').onchange = function handleImage(e) {
         
-        canvas.setBackgroundColor("blue");
 //        canvas.setBackgroundImage("/photos/10TypesOfPeople.jpg");
         var reader = new FileReader();
           reader.onload = function (event){
@@ -150,10 +150,27 @@ $.getScript("../assets/fabric.min.js", function() {
         document.getElementById("txtArea").value = "";
         
     });
+    
+    document.getElementById("white").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/white.png')";
+    });
+    
+    document.getElementById("blue").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/blue.png')";
+    });
+    
+    document.getElementById("purple").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/purple.png')";
+    });
+    
+    document.getElementById("pink").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/pink.png')";
+    });
 
 }); 
 
-//function showTextArea(){
-//    document.getElementById("txtArea").style.display = "block";
-//}
+
+ 
+
+
 
