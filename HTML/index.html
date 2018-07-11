@@ -344,30 +344,30 @@
     <!-- Smooth Scrolling -->
 
     <script>
-//        $(document).ready(function() {
-//            // Add smooth scrolling to all links in navbar + footer link
-//            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-//
-//                // Make sure this.hash has a value before overriding default behavior
-//                if (this.value1 !== "") {
-//
-//                    // Prevent default anchor click behavior
-//                    event.preventDefault();
-//
-//                    // Store hash
-//                    var value1 = this.value1;
-//
-//                    // Using jQuery's animate() method to add smooth page scroll
-//                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-//                    $('html, body').animate({
-//                        scrollTop: $(value1).offset().top
-//                    }, 900, function() {
-//
-//                        window.location.value1 = value1;
-//                    });
-//                } // End if
-//            });
-//        })
+        $(document).ready(function() {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.value1 !== "") {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var value1 = this.value1;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(value1).offset().top
+                    }, 900, function() {
+
+                        window.location.value1 = value1;
+                    });
+                } // End if
+            });
+        })
 
     </script>
 
