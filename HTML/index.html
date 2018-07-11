@@ -50,15 +50,23 @@
 
             <div class="collapse navbar-collapse" id="navbarId">
                 <ul class="nav navbar-nav navbar-right">
+                    <!-- Use this for drop-down if we need it 
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/HTML/computer.html">Computing</a></li>
-                            <li><a href="/HTML/drama.html">Drama</a></li>
-                            <li><a href="/HTML/fiction.html">Fiction</a></li>
-                            <li><a href="/HTML/mystery.html">Mystery</a></li>
+                            <li><a href="/Your/Link">Top Selections</a></li>
+                            <li><a href="/Your.Link">Reviews</a></li>
+                            <li><a href="/Your/Link">Make Your Own</a></li>
+                            <li><a href="/Your/Link">Contact Us</a></li>
                         </ul>
                     </li>
+                    -->
+                    <li><a href="#section1-shirts">Top Selections</a></li>
+                    <li><a href="#section2-reviews">Reviews</a></li>
+                    <li><a href="#section3-buildYourOwnShirt">Make Your Own</a></li>
+                    <li><a href="#section4-contactUs">Contact Us</a></li>
+                    
+                    <!-- Currently not built out -->
                     <li><a href="/HTML/shoppingcart.html">Shopping Cart</a></li>
                 </ul>
             </div>
@@ -250,7 +258,7 @@
     <!-- Section 4: Get in touch -->
     <section id="contact-us">
         <!-- Left Panel Begins -->
-        <div id="section4-getInTouch" class="row">
+        <div id="section4-contactUs" class="row">
             <div class="col-sm-9" id="panel-left">
                 <div class="col-sm-12">
                     <h1>Get in Touch</h1>
@@ -306,22 +314,21 @@
             $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
                 // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
+                if (this.value1 !== "") {
 
                     // Prevent default anchor click behavior
                     event.preventDefault();
 
                     // Store hash
-                    var hash = this.hash;
+                    var value1 = this.value1;
 
                     // Using jQuery's animate() method to add smooth page scroll
                     // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
-                        scrollTop: $(hash).offset().top
+                        scrollTop: $(value1).offset().top
                     }, 900, function() {
 
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
+                        window.location.value1 = value1;
                     });
                 } // End if
             });
