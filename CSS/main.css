@@ -54,21 +54,20 @@
 }
 
 
-h1 {
+#main h1 {
     text-align: center;
+    color: white;
 }
 
 #section4-getInTouch h1, h2, h3, p {
     color: white;
 }
 
-#main{
-    display: none;
-}
+
 
 
 .img-responsive {
-    width: 90%;
+    width: 100%;
     height: auto;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
@@ -150,30 +149,27 @@ div.row.popular{
     background-color: antiquewhite;  
 }*/
 
-#coolShirtsRow {
-    margin-top: 100px;
-    
-}
 
 #section1-shirts {
     background-color: #00CCFF; /* Color 2 */
-    padding-top: 5vh;
-    padding-bottom: 10vh;
+    padding: 10vh 5vh;
 }
 
 #section2-reviews {
     background-color: #AEEEF5;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    padding: 12vh 5vh;
 }
 
 #section3-buildYourOwnShirt {
     background-color: #D9EBFF;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    padding: 12vh 5vh;
 }
 
 #section4-getInTouch {
     background-color: #002040;
-    padding-top: 15vh;
+    padding: 12vh 5vh;
+}
+
+#myPage {
+    background-color: #002040;
 }
