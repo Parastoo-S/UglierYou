@@ -246,13 +246,26 @@
                                 
                                 <form id="uploadImg" runat="server">
                                   <input id="uploadedImg" type="file" />
+                                    <button id="use" type="button">Upload</button>
+                                    <button id="del" type="button">Delete</button>
                                     
                                 </form>
-                                <button onClick="deleteObject()">Delete</button>
+                                
 <!--                                <canvas id="canvas"></canvas>-->
                             </div>
                             
                             <img id="myImg" src="#" height="200" alt="" />
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <p>Add Text</p>
+                            </div>
+                            <div class="col-xs-6">
+                                <textarea class="form-control" id="txtArea" rows="3" cols="50" maxlength="100"></textarea>
+                                <button id="addtxt" type="button" onClick="showTextArea()">Add Text</button>
+
+                            </div>
+                        
                         </div>
                     </div>
                 </div>
