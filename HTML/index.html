@@ -31,7 +31,10 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     
     <!-- Script for scrolling was accidentally deleted here, because it was ruining nav-bar, but should be added when fixed. -->
-    
+
+<!--    <script type ="text/javascript" src="../JavaScript/animation.js"></script>-->
+    <script type="text/javascript" src="../JavaScript/index.js"></script>
+
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="300">
@@ -239,15 +242,37 @@
                                 <p>Upload Photo here</p>
                             </div>
                             <div class="col-xs-6">
-                                <button type="button" class="btn btn-default">Default</button>
+<!--                                <input type='file' class="btn btn-default"/>-->
+                                
+                                <form id="uploadImg" runat="server">
+                                  <input id="uploadedImg" type="file" />
+                                    
+                                </form>
+                                <button onClick="deleteObject()">Delete</button>
+<!--                                <canvas id="canvas"></canvas>-->
                             </div>
+                            
+                            <img id="myImg" src="#" height="200" alt="" />
                         </div>
                     </div>
                 </div>
-
+<!--
+                <iframe src="https://www.rushordertees.com/design/#/"; width="1000px"; height="500px">
+                  <p>Your browser does not support iframes.</p>
+                </iframe>
+-->
+<!--
+                <input type="file" onchange="previewFile()"><br>
+                <img src="" height="200" alt="Image preview...">
+-->
+                
+                
+                
+                
                 <div class="col">
                     <div class="col-xs-8">
-                        <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
+                        <canvas id="c" width="500" height="500"></canvas>
+<!--                        <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />-->
                         <h2>Choose your Own Shirt!</h2>
                     </div>
                 </div>
@@ -303,9 +328,6 @@
 
 
 
-
-
-
     <!-- Smooth Scrolling -->
 
     <script>
@@ -335,7 +357,6 @@
         })
 
     </script>
-
 
 </body>
 
