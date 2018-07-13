@@ -17,8 +17,7 @@
 
 
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="/CSS/checkoutpage.css" type="text/css">
-    <link href="/CSS/main.css" rel="stylesheet" type="text/css">
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css">
 
 
 
@@ -39,7 +38,7 @@
     -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/HTML/index.html">Home</a>
+            <a class="navbar-brand" href="../index.html">Home</a>
 
 
             <button class="navbar-toggle" data-toggle="collapse" data-target="#navbarId">
@@ -61,18 +60,17 @@
                         </ul>
                     </li>
                     -->
-                    <li><a href="/index.html#section1-shirts">Top Selections</a></li>
-                    <li><a href="/index.html#section2-reviews">Reviews</a></li>
-                    <li><a href="/index.html#section3-buildYourOwnShirt">Make Your Own</a></li>
-                    <li><a href="/index.html#section4-contactUs">Contact Us</a></li>
+                    <li><a href="../index.html#section1-shirts">Top Selections</a></li>
+                    <li><a href="../index.html#section2-reviews">Reviews</a></li>
+                    <li><a href="../index.html#section3-buildYourOwnShirt">Make Your Own</a></li>
+                    <li><a href="../index.html#section4-contactUs">Contact Us</a></li>
 
                     <!-- Currently not built, leads to checkout page for now -->
-                    <li><a href="/HTML/checkoutpage.html">Shopping Cart</a></li>
+                    <li><a href="HTML/checkoutpage.html">Shopping Cart</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
 
 
 
@@ -82,15 +80,15 @@
     <div id="checkout-lead" class="container text-center">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="searchResults">
+                <h1 class="searchResults checkoutBlackText">
                     Checkout<br>
                 </h1>
-                <p>Anything with a (*) is a mandatory field</p>
+                <p class="checkoutBlackText">Anything with a (*) is a mandatory field</p>
             </div>
         </div>
         <div class="row" "line-straight">
             <div class="col-xs-12">
-                <img class="center-block" src="/assets/line-straight-thin.png">
+                <img class="center-block" src="../assets/line-straight-thin.png">
             </div>
         </div>
         <br><br>
@@ -103,18 +101,18 @@
                 <form method="get" name="form" action="checkoutComplete.html">
                     <!-- Subsection 1: Personal Information -->
                     <div class="container">
-                        <h2> Personal Information</h2>
+                        <h2 class="checkoutBlackText"> Personal Information</h2>
                     </div>
                     <div class="col-xs-6">
-                        <div class="form-group">
-                            <label for="form_name">First Name (*)</label>
+                        <div class="form-group checkoutBlackText">
+                            <label for="form_name" >First Name (*)</label>
                             <input id="form_firstname" placeholder="Please enter your first name *" required data-error="First name is required." type="text" class="form-control" maxlength="20" autocomplete="off" name="a">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
                     <div class="col-xs-6">
-                        <div class="form-group">
-                            <label for="form_lastname">Last Name (*)</label>
+                        <div class="form-group checkoutBlackText">
+                            <label for="form_lastname" >Last Name (*)</label>
                             <input id="form_lastname" placeholder="Please enter your last name *" required data-error="Last name is required." type="text" class="form-control" autocomplete="off" maxlength="20" name="b">
                             <div class="help-block with-errors"></div>
                         </div>
@@ -129,7 +127,7 @@
 
                     <!-- Subsection 2: Mailing Address -->
                     <div id="mailingaddress" class="container">
-                        <h2>Mailing Address</h2>
+                        <h2 class="checkoutBlackText">Mailing Address</h2>
                     </div>
                     <div class="col-xs-12">
                         <div class="form-group">
@@ -163,7 +161,6 @@
 
                     <!-- Subsection 3: Shipping Preferences -->
                     <div id="shippingpreferences" class="container">
-                        <h2>Shipping Information</h2>
                     </div>
                     <div id="shippingpreferencesForm" class="col-xs-12">
                         <label for="form_shippingpreferences">Shipping Preferences (*)</label>
@@ -175,7 +172,7 @@
                     </div>
                     <!-- Subsection 4: Payment Information -->
                     <div id="paymentinformation" class="container">
-                        <h2>Payment Information</h2>
+                        <h2 class="checkoutBlackText">Payment Information</h2>
                     </div>
                     <div class="col-xs-12">
                         <div class="form-group">
@@ -197,8 +194,7 @@
                         <div class="col-xs-4">
                             <div class="col-xs-12">
                                 <br>
-                                <input id="submitButton" class="submitImage" height="10%" width="60%" type="image" src="/Images/submitButton.png" />
-                                <div id="snackbar"> Your order has been placed! Check your email for confirmation! </div>
+                                <input id="submitButton" class="submitImage" height="10%" width="60%" type="image" src="../Photos/submitButton.png" />
                             </div>
                         </div>
                         <div class="col-xs-4">
