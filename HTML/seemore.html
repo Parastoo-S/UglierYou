@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Header Info -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico"> -->
+
+    <title>See More</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- CSS LINK -->
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    
+    <!-- Freewall JS Link + CSS -->
+    <script type="text/javascript" src="../JavaScript/freewall.js"></script>
+    <style type="text/css">
+        #container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .item {
+            background: rgb(135, 199, 135);
+            width: 320px;
+            height: 320px;
+        }
+    </style>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Home</a>
+
+
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#navbarId">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarId">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Use this for drop-down if we need it 
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Your/Link">Top Selections</a></li>
+                            <li><a href="/Your.Link">Reviews</a></li>
+                            <li><a href="/Your/Link">Make Your Own</a></li>
+                            <li><a href="/Your/Link">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    -->
+                    <li><a href="../index.html#section1-shirts">Top Selections</a></li>
+                    <li><a href="../index.html#section2-reviews">Reviews</a></li>
+                    <li><a href="../index.html#section3-buildYourOwnShirt">Make Your Own</a></li>
+                    <li><a href="../index.html#section4-contactUs">Contact Us</a></li>
+
+                    <!-- Currently not built, leads to checkout page for now -->
+                    <li><a href="HTML/checkoutpage.html">Shopping Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Nav -->
+
+
+    <!-- Section 1: Unnamed -->
+		<div class='header'>
+			<div class="clearfix">
+				<div class="float-left">
+						<h1><a href="http://vnjs.net/www/project/freewall/">Free Wall</a></h1>
+						<div class='target'>Creating dynamic grid layouts.</div>
+				</div>
+			</div>
+		</div>
+		<div id="freewall" class="free-wall"></div>
+
+		<script type="text/javascript">
+			var temp = "<div class='brick' style='width:{width}px;'><img src='../Photos/JSTest-circlepunch.png' width='100%'></div>";
+			var w = 1, h = 1, html = '', limitItem = 49;
+			for (var i = 0; i < limitItem; ++i) {
+				w = 1 + 3 * Math.random() << 0;
+				html += temp.replace(/\{width\}/g, w*150).replace("{index}", i + 1);
+			}
+			$("#freewall").html(html);
+			var wall = new Freewall("#freewall");
+			wall.reset({
+				selector: '.brick',
+				animate: true,
+				cellW: 150,
+				cellH: 'auto',
+				onResize: function() {
+					wall.fitWidth();
+				}
+			});
+			var images = wall.container.find('.brick');
+			images.find('img').load(function() {
+				wall.fitWidth();
+			});
+		</script>
+    
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -2,8 +2,8 @@
 
     Primary Color:      navigation      - #002040
 
-    Secondary Color 1:  section 1       - #00CCFF
-    Secondary Color 2:  section 2       - #AEEEF5
+    Secondary Color 1:  section 1       - #AEEEF5
+    Secondary Color 2:  section 2       - #F7F0EF
     Secondary Color 3:  section 3       - #D9EBFF
 
     Accent Color:       Highlight tool  - #FFA100
@@ -151,12 +151,12 @@ div.row.popular{
 /* Section used for Modifying sections */
 
 #section1-shirts {
-    background-color: #00CCFF;
+    background-color: #AEEEF5;
     padding: 10vh 8vh;
 }
 
 #section2-reviews {
-    background-color: #AEEEF5;
+    background-color: #F7F0EF;
     padding: 12vh 8vh;
 }
 
@@ -171,6 +171,7 @@ div.row.popular{
     padding: 8vh
 }
 
+/* End of Section Modifications */
 
 #c{
     background-image: url(../Photos/shirts/blue.png);
