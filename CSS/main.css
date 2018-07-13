@@ -33,7 +33,7 @@
 /* Default navbar color override */
 
 .navbar, .dropdown-menu {
-    background-color: rgba(0, 32, 64, 0);
+    background-color: rgba(0, 32, 64, 1);
 }
 
 .nav.navbar-nav li a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-inverse .navbar-nav>.active>a {
