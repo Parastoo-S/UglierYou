@@ -33,11 +33,11 @@
 /* Default navbar color override */
 
 .navbar, .dropdown-menu {
-    background-color:#002040;
+    background-color: rgba(0, 32, 64, 0);
 }
 
 .nav.navbar-nav li a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-inverse .navbar-nav>.active>a {
-    color:#002040;
+    color: rgba(0, 32, 64, 1);
     background-color:white;
 }
 
@@ -163,17 +163,19 @@ div.row.popular{
 #section3-buildYourOwnShirt {
     background-color: #D9EBFF;
     padding: 12vh 8vh;
+    margin: inherit;
 }
 
 #section4-contactUs {
     background-color: #002040;
-    padding: 12vh 8vh;
+    padding: 8vh
 }
 
 #myPage {
     background-color: #002040;
 }
 
+<<<<<<< HEAD
 #c{
     background-image: url(../Photos/shirts/blue.png);
     background-size: cover;
@@ -308,3 +310,19 @@ p.instruction{
     margin: 10px;
     padding: 10px;
 }
+
+/* Navbar JQuery scoll CSS */
+.navbar {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+}
+
+.navbar.scrolled {
+    background: rgb(68, 68, 68); /* IE */
+    background: rgba(0, 32, 64, 1); /* NON-IE */
+}
+
+
