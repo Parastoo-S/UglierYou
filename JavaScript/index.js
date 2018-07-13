@@ -139,15 +139,27 @@ $.getScript("../assets/fabric.min.js", function() {
     });
     
     
+     document.getElementById("clr").addEventListener("click", function(){
+        if (confirm("Clear Canvas?")) {
+            canvas.clear();
+        }
+    });
+    
 
     document.getElementById("addtxt").addEventListener("click", function(){
         
         var text = document.getElementById("txtArea").value;
-        var textbox = new fabric.Textbox(text);
-        canvas.centerObject(textbox);
-        canvas.add(textbox).setActiveObject(textbox);
-        canvas.renderAll();
-        document.getElementById("txtArea").value = "";
+        if(text !== ""){
+            var textbox = new fabric.Textbox(text);
+            canvas.centerObject(textbox);
+            canvas.add(textbox).setActiveObject(textbox);
+            canvas.renderAll();
+            document.getElementById("txtArea").value = "";
+        }
+        
+        else{
+            alert("Please enter a text.");
+        }
         
     });
     
@@ -166,6 +178,31 @@ $.getScript("../assets/fabric.min.js", function() {
     document.getElementById("pink").addEventListener("click", function(){
         document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/pink.png')";
     });
+
+    document.getElementById("yellow").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/yellow.png')";
+    });
+    
+    document.getElementById("green").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/green.png')";
+    });
+
+    document.getElementById("lightGreen").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/lightGreen.png')";
+    });
+    
+    document.getElementById("orange").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/orange.png')";
+    });
+
+    document.getElementById("red").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/red.png')";
+    });
+
+    document.getElementById("black").addEventListener("click", function(){
+        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/black.png')";
+    });
+    
 
 }); 
 
