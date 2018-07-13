@@ -35,7 +35,7 @@
 <!--    <script type ="text/javascript" src="../JavaScript/animation.js"></script>-->
     <script type="text/javascript" src="../JavaScript/index.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
+    
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="300">
@@ -299,7 +299,7 @@
                         <h2>3. Add Text</h2>
                         <br>
                         <div class="row">
-                            <textarea class="form-control" id="txtArea" rows="3" cols="10" maxlength="100" placeholder="Add Text..."></textarea>
+                            <textarea class="form-control editor" id="txtArea" rows="3" cols="10" maxlength="100" placeholder="Add Text..."></textarea>
                             <button id="addtxt" type="button">Add Text</button>
                         
                         </div>
@@ -438,6 +438,7 @@
 
 
     <script>
+        $(".editor").jqte({b: false});
         /* Smooth Scrolling Script */
         $(document).ready(function() {
             $("a").on('click', function(event) {
@@ -458,7 +459,10 @@
                 } // End if
             });
         });
+        
     </script>
+
+
 
 </body>
 

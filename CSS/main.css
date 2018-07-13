@@ -189,6 +189,8 @@ div.row.popular{
 textarea.form-control#txtArea {
     height: 50px;
     width: 200px;
+    color: red;
+    font-family: cursive;
 }
 row.colours{
     padding-top: 15px;
