@@ -32,6 +32,10 @@
 
     <!-- Script for scrolling was accidentally deleted here, because it was ruining nav-bar, but should be added when fixed. -->
 
+<!--    <script type ="text/javascript" src="../JavaScript/animation.js"></script>-->
+    <script type="text/javascript" src="../JavaScript/index.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="300">
@@ -228,29 +232,161 @@
         <div id="section3-buildYourOwnShirt" class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <div class="col-xs-4">
+                    <div class="col-xs-5">
                         <h1> Personalize</h1>
-                        <h2>Option 1:</h2>
-                        <h2>Option 2:</h2>
-                        <h2>Option 3:</h2>
-                        <br>
+                        <h2>1. Choose your shirt colour!</h2>
+                        <div class="row colors" >                           
+                            
+                            <div class="col-xs-1">
+                             <div class="pallete" id="white" style="background-color: #ffffff;"></div>
+                            </div>
+
+                            <div class="col-xs-1">
+                                <div class="pallete" id="blue" style="background-color: #a9c7f3;"></div>
+                            </div>
+                            <div class="col-xs-1">
+                             <div class="pallete" id="purple" style="background-color: #d0bfd8;"></div>
+                            </div>
+
+                            <div class="col-xs-1">
+                             <div class="pallete" id="pink" style="background-color: #ff7cc9;"></div>
+                            </div>
+
+                            <div class="col-xs-1">
+                             <div class="pallete" id="red" style="background-color: #ff283a;"></div>
+                            </div>
+
+                            
+                        </div>
+                        
+                        <div class="row colors" >                           
+                                
+                            <div class="col-xs-1">
+                             <div class="pallete" id="orange" style="background-color: #ffc66f;"></div>
+                            </div>
+                            
+                            
+                            <div class="col-xs-1">
+                             <div class="pallete" id="yellow" style="background-color: #f5ff9c;"></div>
+                            </div>
+                            
+                            <div class="col-xs-1">
+                             <div class="pallete" id="lightGreen" style="background-color: #afefad;"></div>
+                            </div>
+                            
+                            <div class="col-xs-1">
+                             <div class="pallete" id="green" style="background-color: #75a284;"></div>
+                            </div>
+                            
+                            <div class="col-xs-1">
+                             <div class="pallete" id="black" style="background-color: #353535;"></div>
+                            </div>
+                                
+                        </div>
+                        
+                        <h2>2. Add Photos </h2>
                         <div class="row">
                             <div class="col-xs-6">
-                                <p>Upload Photo here</p>
+                                <form id="uploadImg" runat="server">
+                                    <input id="uploadedImg" type="file" accept="image/x-png,image/jpeg" />
+                                    <button id="use" type="button"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
+<!--                                    <button class="btn"><i class="fas fa-cloud-upload-alt"></i>Upload</button>-->
+                                </form>
                             </div>
-                            <div class="col-xs-6">
-                                <button type="button" class="btn btn-default">Default</button>
+                            
+                        </div>
+
+                        <h2>3. Add Text</h2>
+                        <br>
+                        <div class="row">
+                            <textarea class="form-control editor" id="txtArea" rows="3" cols="10" maxlength="100" placeholder="Add Text..."></textarea>
+                            <button id="addtxt" type="button">Add Text</button>
+                        
+                        </div>
+                        <h2>4. Pick your size</h2>
+                        <div class="row">
+                            <div >
+                                 <select class="styled-select blue semi-square">
+                                <option value="" disabled selected>Pick Your Size</option>
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
                             </div>
+                        </div>
+                        <br><br>
+                        <div class="row ">
+                            <button class="add2cart"><b><i class="fas fa-cart-plus"></i> Add to Cart</b></button>
                         </div>
                     </div>
                 </div>
-
+<!--
+                <iframe src="https://www.rushordertees.com/design/#/"; width="1000px"; height="500px">
+                  <p>Your browser does not support iframes.</p>
+                </iframe>
+-->
+<!--
+                <input type="file" onchange="previewFile()"><br>
+                <img src="" height="200" alt="Image preview...">
+-->
+                
+                
+                
+                
                 <div class="col">
-                    <div class="col-xs-8">
-                        <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
+                    <div class="col-xs-6">
+                        <canvas id="c" width="550" height="600"></canvas>
+                        <div class="row options">
+                            <button id="del" type="button"><b><i class="fas fa-trash-alt"></i> Delete Selection</b></button>
+                            <button id="clr" type="button"><b><i class="fas fa-eraser"></i> Clear Canvas</b></button>
+
+                        </div>
+<!--                        <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />-->
                         <h2>Choose your Own Shirt!</h2>
                     </div>
                 </div>
+                
+                <div class="col">
+                    <div class="col-xs-1 info">
+                    <button class="help" id="showHelp" data-toggle="modal" data-target="#myModal"><i class="fas fa-question-circle" style="font-size:36px"></i></button>
+                    </div>
+                </div>
+                
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h3 class="modal-title"><i class="fas fa-info-circle"></i> Help</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p class="instruction">
+                          
+                            <b>To personalize your own T-shirt:</b> <br>
+                            <b>1.</b>	Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
+                            <b>2.</b>	If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg an .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                            <b>3.</b>	If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                            <b>4.</b>	If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
+                            <b>5.</b>	Select your size form the dropdown menu.<br>
+                            <b>6.</b>	Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
+                            <b>7.</b>	If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
+    
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
+                    </div>
+                  </div>
+
+                </div>
+              </div> <!-- Modal end -->
+                
+                
             </div>
         </div>
     </section>
@@ -301,7 +437,6 @@
 
 
 
-
     <script>
         /* Smooth Scrolling Script */
         $(document).ready(function() {
@@ -323,7 +458,9 @@
                 } // End if
             });
         });
+        
     </script>
+<!--
     <script>
         /**
          * Listen to scroll to change header opacity class
@@ -344,6 +481,8 @@
             });
         }
     </script>
+-->
+
 
 
 </body>
