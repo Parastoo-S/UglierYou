@@ -54,7 +54,7 @@
 /*    background-color: #0E0B16;*/
     background-image: url(../Photos/city-street-background.jpg);
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
 }
@@ -319,4 +319,12 @@ p.instruction{
 
 .checkoutBlackText {
     color: black;
+}
+
+.chevron-down {
+    top:55vh;
+    position: relative;
+    transform:translateY(-100%);
+    width:10%;
+    height: auto;
 }
