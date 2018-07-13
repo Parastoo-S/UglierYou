@@ -27,14 +27,17 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    
+
     <!-- Script for scrolling was accidentally deleted here, because it was ruining nav-bar, but should be added when fixed. -->
 
+<<<<<<< HEAD
 <!--    <script type ="text/javascript" src="../JavaScript/animation.js"></script>-->
     <script type="text/javascript" src="../JavaScript/index.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+=======
+>>>>>>> befd499e035dd79fc905ed37c369ceaa60613c61
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="300">
@@ -68,7 +71,7 @@
                     <li><a href="#section2-reviews">Reviews</a></li>
                     <li><a href="#section3-buildYourOwnShirt">Make Your Own</a></li>
                     <li><a href="#section4-contactUs">Contact Us</a></li>
-                    
+
                     <!-- Currently not built out -->
                     <li><a href="/HTML/shoppingcart.html">Shopping Cart</a></li>
                 </ul>
@@ -433,39 +436,30 @@
         </div>
         <!-- Left Panel Ends -->
     </section>
-        
 
 
-
-
-    <!-- Smooth Scrolling -->
 
     <script>
+        /* Smooth Scrolling Script */
         $(document).ready(function() {
-            // Add smooth scrolling to all links in navbar + footer link
-            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            $("a").on('click', function(event) {
 
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.value1 !== "") {
-
-                    // Prevent default anchor click behavior
+                if (this.hash !== "") {
+                    // Remove default anchor movement
                     event.preventDefault();
 
                     // Store hash
-                    var value1 = this.value1;
+                    var hash = this.hash;
 
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
-                        scrollTop: $(value1).offset().top
-                    }, 900, function() {
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
 
-                        window.location.value1 = value1;
+                        window.location.hash = hash;
                     });
                 } // End if
             });
-        })
-
+        });
     </script>
 
 </body>
