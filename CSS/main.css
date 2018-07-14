@@ -46,6 +46,17 @@
     src:    url("fonts/Inconsolata-Regular.ttf") format('truetype');
 }
 
+@font-face {
+    font-family: "Fancy";
+    src: url("fonts/fancy.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "handWriting";
+    src: url("fonts/handWriting.otf") format("truetype");
+}
+
+
 
 /*
 @font-face {
@@ -199,25 +210,18 @@ div.row.popular{
 
 
 .canvas-container{
-    margin: 50px auto auto 160px;
+    margin: 50px auto auto 175px;
     text-align:center;
-/*    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);*/
-    border: 1px solid #8A8A8A;
+    border: 0.5px dashed #8A8A8A;
     
 }
-
-/*
-#c{
-   display: inline;
-}
-*/
 
 #canvasBG{
     background-image: url(../Photos/shirts/blue.png);
     background-size: cover;
     height: 600px;
     width: 550px;
-    padding-top: 70px;
+    padding-top: 30px;
 
 }
 
@@ -363,4 +367,9 @@ p.instruction{
 
 .checkoutBlackText {
     color: black;
+}
+
+.statement{
+    color: red;
+    font-size: 18px;
 }
