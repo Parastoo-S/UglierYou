@@ -303,6 +303,30 @@
                             <button id="addtxt" type="button">Add Text</button>
                         
                         </div>
+                        <div class="row">
+                            <p>Change font</p>
+                            <select id="font-family">
+                                <option value="Times New Roman">Times New Roman</option>
+                                <option value="Pacifico">Pacifico</option>
+                                <option value="VT323">VT323</option>
+                                <option value="Quicksand">Quicksand</option>
+                                <option value="Inconsolata">Inconsolata</option>
+                            </select>
+
+                        </div>
+                        <div class="row font-colors" >
+                            <p>Select font color: </p>
+                            <div class="col-xs-1">
+                             <div class="pallete " id="font-col-b" style="background-color: #000000;"></div>
+                            </div>
+
+                            <div class="col-xs-1">
+                             <div class="pallete" id="font-col-w" style="background-color: #ffffff;"></div>
+                            </div>
+
+ 
+                        </div>  
+                        
                         <h2>4. Pick your size</h2>
                         <div class="row">
                             <div >
@@ -337,11 +361,12 @@
                 
                 <div class="col">
                     <div class="col-xs-6">
-                        <canvas id="c" width="550" height="600"></canvas>
+                        <div id="canvasBG">
+                            <canvas id="c" width="240" height="400"></canvas>
+                        </div>
                         <div class="row options">
-                            <button id="del" type="button"><b><i class="fas fa-trash-alt"></i> Delete Selection</b></button>
-                            <button id="clr" type="button"><b><i class="fas fa-eraser"></i> Clear Canvas</b></button>
-
+                                <button id="del" type="button"><b><i class="fas fa-trash-alt"></i> Delete Selection</b></button>
+                                <button id="clr" type="button"><b><i class="fas fa-eraser"></i> Clear Canvas</b></button>
                         </div>
 <!--                        <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />-->
                         <h2>Choose your Own Shirt!</h2>

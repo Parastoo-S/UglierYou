@@ -26,8 +26,34 @@
     font-weight: bold;
 } */
 
+@font-face {
+    font-family: "Pacifico";
+    src:    url("fonts/Pacifico.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "VT323";
+    src:    url("fonts/VT323-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src:    url("fonts/Quicksand-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    src:    url("fonts/Inconsolata-Regular.ttf") format('truetype');
+}
 
 
+/*
+@font-face {
+  font-family: "Pacifico";
+  src: url(output-sans.woff2) format('woff2'),
+       url(output-sans.woff) format('woff');
+}
+*/
 /**** NAVBAR Styles ****/
 
 /* Default navbar color override */
@@ -168,13 +194,31 @@ div.row.popular{
 
 #section4-contactUs {
     background-color: #002040;
-    padding: 8vh
+    padding: 8vh;
 }
 
 
+.canvas-container{
+    margin: 50px auto auto 160px;
+    text-align:center;
+/*    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);*/
+    border: 1px solid #8A8A8A;
+    
+}
+
+/*
 #c{
+   display: inline;
+}
+*/
+
+#canvasBG{
     background-image: url(../Photos/shirts/blue.png);
     background-size: cover;
+    height: 600px;
+    width: 550px;
+    padding-top: 70px;
+
 }
 
 .pallete{
