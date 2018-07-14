@@ -196,7 +196,7 @@ $.getScript("../assets/fabric.min.js", function() {
     });
 
     document.getElementById("red").addEventListener("click", function(){
-        document.getElementById("canvasBGcanvasBG").style.backgroundImage = "url('/Photos/shirts/red.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/red.png')";
     });
 
     document.getElementById("black").addEventListener("click", function(){
@@ -228,15 +228,30 @@ $.getScript("../assets/fabric.min.js", function() {
     });
     
     document.getElementById("font-col-w").addEventListener("click", function(){
-        console.log("clicked");
-        canvas.getActiveObject().setColor("#ffffff");
-        canvas.requestRenderAll();
+        
+        var activeObject = canvas.getActiveObject();
+        if (activeObject) {
+            canvas.getActiveObject().setColor("#ffffff");
+            canvas.requestRenderAll();
+        }
+        else{
+            alert("Please select an Text");
+        }
+            
+        
     });
 
     document.getElementById("font-col-b").addEventListener("click", function(){
-        console.log("clicked");
-        canvas.getActiveObject().setColor("#000000");
-        canvas.requestRenderAll();
+        
+        var activeObject = canvas.getActiveObject();
+        if (activeObject) {
+            canvas.getActiveObject().setColor("#000000");
+            canvas.requestRenderAll();
+        }
+        else{
+            alert("Please select an Text");
+        }
+
     });
    
     
