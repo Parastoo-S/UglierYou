@@ -18,25 +18,14 @@
 
     <!-- CSS LINK -->
     <link href="../CSS/main.css" rel="stylesheet" type="text/css">
-    
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    
-    <!-- Freewall JS Link + CSS -->
-    <script type="text/javascript" src="../JavaScript/freewall.js"></script>
-    <style type="text/css">
-        #container {
-            width: 80%;
-            margin: auto;
-        }
 
-        .item {
-            background: rgb(135, 199, 135);
-            width: 320px;
-            height: 320px;
-        }
-    </style>
+    <!-- Freewall JS Link + CSS  -->
+    <script type="text/javascript" src="../JavaScript/freewall.js"></script>
+
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -49,7 +38,7 @@
 
 <body>
 
-    <!-- NAVIGATION BAR -->
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <a class="navbar-brand" href="../index.html">Home</a>
@@ -85,47 +74,48 @@
             </div>
         </div>
     </nav>
-    <!-- End of Nav -->
 
 
-    <!-- Section 1: Unnamed -->
-		<div class='header'>
-			<div class="clearfix">
-				<div class="float-left">
-						<h1><a href="http://vnjs.net/www/project/freewall/">Free Wall</a></h1>
-						<div class='target'>Creating dynamic grid layouts.</div>
-				</div>
-			</div>
-		</div>
-		<div id="freewall" class="free-wall"></div>
+    <!-- Section 1: Grid layout -->
 
-		<script type="text/javascript">
-			var temp = "<div class='brick' style='width:{width}px;'><img src='../Photos/JSTest-circlepunch.png' width='100%'></div>";
-			var w = 1, h = 1, html = '', limitItem = 49;
-			for (var i = 0; i < limitItem; ++i) {
-				w = 1 + 3 * Math.random() << 0;
-				html += temp.replace(/\{width\}/g, w*150).replace("{index}", i + 1);
-			}
-			$("#freewall").html(html);
-			var wall = new Freewall("#freewall");
-			wall.reset({
-				selector: '.brick',
-				animate: true,
-				cellW: 150,
-				cellH: 'auto',
-				onResize: function() {
-					wall.fitWidth();
-				}
-			});
-			var images = wall.container.find('.brick');
-			images.find('img').load(function() {
-				wall.fitWidth();
-			});
-		</script>
-    
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <div id="seemore-section1" class="freewall-container">
+        <div id="freewall-container">
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+            <div class="item brick"></div>
+
+        </div>
+    </div>
+    <script>
+        $(function() {
+            var wall = new Freewall("#freewall-container");
+            wall.fitWidth();
+            
+            wall.reset({
+                selector: '.brick',
+                onResize: function() {
+                    this.fitWidth();
+
+                },
+                animate: true,
+                gutterX: 20,
+                cellW: 200,
+                cellH: 200
+
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>

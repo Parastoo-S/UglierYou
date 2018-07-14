@@ -1,35 +1,14 @@
 // created by Minh Nguyen;
 // version 1.0.6;
 
-/*
-Copyright (c) 2018 Minh Nguyen
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE. */
-
-(function ($) {
+(function($) {
 
     // for zeptojs;
-    $.isNumeric == null && ($.isNumeric = function (src) {
+    $.isNumeric == null && ($.isNumeric = function(src) {
         return src != null && src.constructor === Number;
     });
 
-    $.isFunction == null && ($.isFunction = function (src) {
+    $.isFunction == null && ($.isFunction = function(src) {
         return src != null && src instanceof Function;
     });
 
@@ -55,21 +34,21 @@ SOFTWARE. */
             cacheSize: true, // caches the original size of block;
             rightToLeft: false,
             bottomToTop: false,
-            onGapFound: function () {},
-            onComplete: function () {},
-            onResize: function () {},
-            onBlockDrag: function () {},
-            onBlockMove: function () {},
-            onBlockDrop: function () {},
-            onBlockReady: function () {},
-            onBlockFinish: function () {},
-            onBlockActive: function () {},
-            onBlockResize: function () {}
+            onGapFound: function() {},
+            onComplete: function() {},
+            onResize: function() {},
+            onBlockDrag: function() {},
+            onBlockMove: function() {},
+            onBlockDrop: function() {},
+            onBlockReady: function() {},
+            onBlockFinish: function() {},
+            onBlockActive: function() {},
+            onBlockResize: function() {}
         },
         plugin: {},
         totalGrid: 1,
         transition: false,
-        loadBlock: function (item, setting) {
+        loadBlock: function(item, setting) {
             var runtime = setting.runtime;
             var gutterX = runtime.gutterX;
             var gutterY = runtime.gutterY;
@@ -84,10 +63,7 @@ SOFTWARE. */
 
             //ignore dragging block;
             if ($item.hasClass('fw-float')) return null;
-            $item.attr({
-                id: blockId,
-                'data-delay': item.index
-            });
+            $item.attr({id: blockId, 'data-delay': item.index});
 
             //remove animation for speed render;
             if (setting.animate && this.transition) {
@@ -189,7 +165,7 @@ SOFTWARE. */
 
             return (fixPos && active) ? null : block;
         },
-        setBlock: function (block, setting) {
+        setBlock: function(block, setting) {
             var runtime = setting.runtime;
             var gutterX = runtime.gutterX;
             var gutterY = runtime.gutterY;
@@ -211,7 +187,7 @@ SOFTWARE. */
                 fixSize: block.fixSize,
                 resize: block.resize,
                 top: y * cellH,
-                left: x * cellW,
+                left: x  * cellW,
                 width: cellW * width - gutterX,
                 height: cellH * height - gutterY
             };
@@ -227,7 +203,7 @@ SOFTWARE. */
             // for append feature;
             return realBlock;
         },
-        showBlock: function (item, setting) {
+        showBlock: function(item, setting) {
             var runtime = setting.runtime;
             var method = setting.animate && !this.transition ? 'animate' : 'css';
             var block = runtime.blocks[item.id];
@@ -296,7 +272,7 @@ SOFTWARE. */
 
                 if (runtime.length == 0) {
                     var duration = setting.animate ? 500 : 0;
-                    item.delay = setTimeout(function () {
+                    item.delay = setTimeout(function() {
                         setting.onComplete.call(item, block, setting);
                     }, duration);
                 }
@@ -306,9 +282,8 @@ SOFTWARE. */
 
             setting.delay > 0 ? (item.delay = setTimeout(action, setting.delay * $item.attr("data-delay"))) : action();
         },
-        nestedGrid: function (item, setting) {
-            var innerWall, $item = $(item),
-                runtime = setting.runtime;
+        nestedGrid: function(item, setting) {
+            var innerWall, $item = $(item), runtime = setting.runtime;
             var gutterX = $item.attr("data-gutterX") || setting.gutterX;
             var gutterY = $item.attr("data-gutterY") || setting.gutterY;
             var method = $item.attr("data-method") || "fitZone";
@@ -341,7 +316,7 @@ SOFTWARE. */
                 }
             }
         },
-        adjustBlock: function (block, setting) {
+        adjustBlock: function(block, setting) {
             var runtime = setting.runtime;
             var gutterX = runtime.gutterX;
             var gutterY = runtime.gutterY;
@@ -355,7 +330,7 @@ SOFTWARE. */
                 block.height = Math.round(($item.height() + gutterY) / cellH);
             }
         },
-        adjustUnit: function (width, height, setting) {
+        adjustUnit: function(width, height, setting) {
             var gutterX = setting.gutterX;
             var gutterY = setting.gutterY;
             var runtime = setting.runtime;
@@ -428,7 +403,7 @@ SOFTWARE. */
 
             runtime.keepOrder = setting.keepOrder;
         },
-        resetGrid: function (runtime) {
+        resetGrid: function(runtime) {
             runtime.blocks = {};
             runtime.length = 0;
             runtime.cellH = 0;
@@ -438,7 +413,7 @@ SOFTWARE. */
             runtime.totalCol = 0;
             runtime.totalRow = 0;
         },
-        setDraggable: function (item, option) {
+        setDraggable: function(item, option) {
             var isTouch = false;
             var config = {
                 startX: 0, //start clientX;
@@ -446,12 +421,12 @@ SOFTWARE. */
                 top: 0,
                 left: 0,
                 handle: null,
-                onDrop: function () {},
-                onDrag: function () {},
-                onStart: function () {}
+                onDrop: function() {},
+                onDrag: function() {},
+                onStart: function() {}
             };
 
-            $(item).each(function () {
+            $(item).each(function() {
                 var setting = $.extend({}, config, option);
                 var handle = setting.handle || this;
                 var ele = this;
@@ -511,11 +486,11 @@ SOFTWARE. */
 
                 // ignore drag drop on text field;
                 $E.find("iframe, form, input, textarea, .ignore-drag")
-                    .each(function () {
-                        $(this).on("touchstart mousedown", function (evt) {
-                            evt.stopPropagation();
-                        });
+                .each(function() {
+                    $(this).on("touchstart mousedown", function(evt) {
+                        evt.stopPropagation();
                     });
+                });
 
                 $D.unbind("mouseup touchend", mouseUp);
                 $D.unbind("mousemove touchmove", mouseMove);
@@ -523,7 +498,7 @@ SOFTWARE. */
 
             });
         },
-        setTransition: function (item, trans) {
+        setTransition: function(item, trans) {
             var style = item.style;
             var $item = $(item);
 
@@ -542,7 +517,7 @@ SOFTWARE. */
                 style.transition = trans;
             }
         },
-        getFreeArea: function (t, l, runtime) {
+        getFreeArea: function(t, l, runtime) {
             var maxY = Math.min(t + runtime.maxHoB, runtime.limitRow);
             var maxX = Math.min(l + runtime.maxWoB, runtime.limitCol);
             var minX = maxX;
@@ -575,7 +550,7 @@ SOFTWARE. */
             };
 
         },
-        setWallSize: function (runtime, container) {
+        setWallSize: function(runtime, container) {
             var totalRow = runtime.totalRow;
             var totalCol = runtime.totalCol;
             var gutterY = runtime.gutterY;
@@ -603,7 +578,7 @@ SOFTWARE. */
 
     var engine = {
         // Giot just a person name;
-        giot: function (items, setting) {
+        giot: function(items, setting) {
             var runtime = setting.runtime,
                 row = runtime.limitRow,
                 col = runtime.limitCol,
@@ -827,10 +802,10 @@ SOFTWARE. */
         var bodyStyle = document.body.style;
         if (!layoutManager.transition) {
             (bodyStyle.webkitTransition != null ||
-                bodyStyle.MozTransition != null ||
-                bodyStyle.msTransition != null ||
-                bodyStyle.OTransition != null ||
-                bodyStyle.transition != null) &&
+            bodyStyle.MozTransition != null ||
+            bodyStyle.msTransition != null ||
+            bodyStyle.OTransition != null ||
+            bodyStyle.transition != null) &&
             (layoutManager.transition = true);
         }
 
@@ -845,7 +820,7 @@ SOFTWARE. */
             var handle = $item.find($item.attr("data-handle"));
             layoutManager.setDraggable(item, {
                 handle: handle[0],
-                onStart: function (event) {
+                onStart: function(event) {
                     if (setting.animate && layoutManager.transition) {
                         layoutManager.setTransition(this, "");
                     }
@@ -853,7 +828,7 @@ SOFTWARE. */
 
                     setting.onBlockDrag.call(item, event);
                 },
-                onDrag: function (event, tracker) {
+                onDrag: function(event, tracker) {
                     var position = $item.position();
                     var top = Math.round(position.top / cellH);
                     var left = Math.round(position.left / cellW);
@@ -861,17 +836,12 @@ SOFTWARE. */
                     var height = Math.round($item.height() / cellH);
                     top = Math.min(Math.max(0, top), runtime.limitRow - height);
                     left = Math.min(Math.max(0, left), runtime.limitCol - width);
-                    klass.setHoles({
-                        top: top,
-                        left: left,
-                        width: width,
-                        height: height
-                    });
+                    klass.setHoles({top: top, left: left, width: width, height: height});
                     klass.refresh();
 
                     setting.onBlockMove.call(item, event);
                 },
-                onDrop: function (event) {
+                onDrop: function(event) {
                     var position = $item.position();
                     var top = Math.round(position.top / cellH);
                     var left = Math.round(position.left / cellW);
@@ -917,7 +887,7 @@ SOFTWARE. */
 
         $.extend(klass, {
 
-            addCustomEvent: function (name, func) {
+            addCustomEvent: function(name, func) {
                 var events = runtime.events;
                 name = name.toLowerCase();
                 !events[name] && (events[name] = []);
@@ -926,7 +896,7 @@ SOFTWARE. */
                 return this;
             },
 
-            appendBlock: function (items) {
+            appendBlock: function(items) {
                 var allBlock = $(items).appendTo(container);
                 var block = null;
                 var activeBlock = [];
@@ -937,7 +907,7 @@ SOFTWARE. */
                         allBlock.sort(runtime.sortFunc);
                     }
 
-                    allBlock.each(function (index, item) {
+                    allBlock.each(function(index, item) {
                         item.index = ++index;
                         block = layoutManager.loadBlock(item, setting);
                         block && activeBlock.push(block);
@@ -949,7 +919,7 @@ SOFTWARE. */
 
                     runtime.length = allBlock.length;
 
-                    allBlock.each(function (index, item) {
+                    allBlock.each(function(index, item) {
                         layoutManager.showBlock(item, setting);
                         if (setting.draggable || item.getAttribute('data-draggable')) {
                             setDraggable(item);
@@ -984,10 +954,8 @@ SOFTWARE. */
                 ]);
 
             */
-            appendHoles: function (holes) {
-                var newHoles = [].concat(holes),
-                    h = {},
-                    i;
+            appendHoles: function(holes) {
+                var newHoles = [].concat(holes), h = {}, i;
                 for (i = 0; i < newHoles.length; ++i) {
                     h = newHoles[i];
                     runtime.holes[h.top + "-" + h.left + "-" + h.width + "-" + h.height] = h;
@@ -997,12 +965,12 @@ SOFTWARE. */
 
             container: container,
 
-            destroy: function () {
+            destroy: function() {
                 var allBlock = container.find(setting.selector).removeAttr('id'),
                     block = null,
                     activeBlock = [];
 
-                allBlock.each(function (index, item) {
+                allBlock.each(function(index, item) {
                     $item = $(item);
                     var width = 1 * $item.attr('data-width') || "";
                     var height = 1 * $item.attr('data-height') || "";
@@ -1012,13 +980,11 @@ SOFTWARE. */
                 });
             },
 
-            fillHoles: function (holes) {
+            fillHoles: function(holes) {
                 if (arguments.length == 0) {
                     runtime.holes = {};
                 } else {
-                    var newHoles = [].concat(holes),
-                        h = {},
-                        i;
+                    var newHoles = [].concat(holes), h = {}, i;
                     for (i = 0; i < newHoles.length; ++i) {
                         h = newHoles[i];
                         delete runtime.holes[h.top + "-" + h.left + "-" + h.width + "-" + h.height];
@@ -1027,7 +993,7 @@ SOFTWARE. */
                 return this;
             },
 
-            filter: function (filter) {
+            filter: function(filter) {
                 runtime.filter = filter;
                 if (runtime.arguments) {
                     this.refresh();
@@ -1035,7 +1001,7 @@ SOFTWARE. */
                 return this;
             },
 
-            fireEvent: function (name, object, setting) {
+            fireEvent: function(name, object, setting) {
                 var events = runtime.events;
                 name = name.toLowerCase();
                 if (events[name] && events[name].length) {
@@ -1046,7 +1012,7 @@ SOFTWARE. */
                 return this;
             },
 
-            fitHeight: function (height) {
+            fitHeight: function(height) {
 
                 var height = height ? height : container.height() || $W.height();
 
@@ -1055,7 +1021,7 @@ SOFTWARE. */
                 runtime.arguments = arguments;
             },
 
-            fitWidth: function (width) {
+            fitWidth: function(width) {
 
                 var width = width ? width : container.width() || $W.width();
 
@@ -1064,7 +1030,7 @@ SOFTWARE. */
                 runtime.arguments = arguments;
             },
 
-            fitZone: function (width, height) {
+            fitZone: function(width, height) {
                 var allBlock = container.find(setting.selector).removeAttr('id'),
                     block = null,
                     activeBlock = [];
@@ -1089,7 +1055,7 @@ SOFTWARE. */
                     allBlock.sort(runtime.sortFunc);
                 }
 
-                allBlock.each(function (index, item) {
+                allBlock.each(function(index, item) {
                     var $item = $(item);
                     item.index = ++index;
                     block = layoutManager.loadBlock(item, setting);
@@ -1106,7 +1072,7 @@ SOFTWARE. */
 
                 runtime.length = allBlock.length;
 
-                allBlock.each(function (index, item) {
+                allBlock.each(function(index, item) {
                     layoutManager.showBlock(item, setting);
                     if (setting.draggable || item.getAttribute('data-draggable')) {
                         setDraggable(item);
@@ -1124,10 +1090,8 @@ SOFTWARE. */
                     block: $('.free')
                 });
             */
-            fixPos: function (option) {
-                $(option.block).attr({
-                    'data-position': option.top + "-" + option.left
-                });
+            fixPos: function(option) {
+                $(option.block).attr({'data-position': option.top + "-" + option.left});
                 return this;
             },
 
@@ -1141,17 +1105,13 @@ SOFTWARE. */
                     block: $('.free')
                 });
             */
-            fixSize: function (option) {
-                option.height != null && $(option.block).attr({
-                    'data-height': option.height
-                });
-                option.width != null && $(option.block).attr({
-                    'data-width': option.width
-                });
+            fixSize: function(option) {
+                option.height != null && $(option.block).attr({'data-height': option.height});
+                option.width != null && $(option.block).attr({'data-width': option.width});
                 return this;
             },
 
-            prepend: function (items) {
+            prepend: function(items) {
                 container.prepend(items);
                 if (runtime.arguments) {
                     this.refresh();
@@ -1159,7 +1119,7 @@ SOFTWARE. */
                 return this;
             },
 
-            refresh: function () {
+            refresh: function() {
                 var params = arguments.length ? arguments : runtime.arguments;
                 var oldArg = runtime.arguments;
                 var method = oldArg ? oldArg.callee : this.fitWidth;
@@ -1182,7 +1142,7 @@ SOFTWARE. */
                     }
                 });
             */
-            reset: function (option) {
+            reset: function(option) {
                 $.extend(setting, option);
                 return this;
             },
@@ -1199,10 +1159,8 @@ SOFTWARE. */
                 });
             */
 
-            setHoles: function (holes) {
-                var newHoles = [].concat(holes),
-                    h = {},
-                    i;
+            setHoles: function(holes) {
+                var newHoles = [].concat(holes), h = {}, i;
                 runtime.holes = {};
                 for (i = 0; i < newHoles.length; ++i) {
                     h = newHoles[i];
@@ -1218,7 +1176,7 @@ SOFTWARE. */
                     return $(itemA).width() - $(itemB).width();
                 });
             */
-            sortBy: function (func) {
+            sortBy: function(func) {
                 runtime.sortFunc = func;
                 if (runtime.arguments) {
                     this.refresh();
@@ -1226,7 +1184,7 @@ SOFTWARE. */
                 return this;
             },
 
-            unFilter: function () {
+            unFilter: function() {
                 delete runtime.filter;
                 this.refresh();
                 return this;
@@ -1242,10 +1200,10 @@ SOFTWARE. */
         }
 
         // setup resize event;
-        $W.resize(function () {
+        $W.resize(function() {
             if (runtime.running) return;
             runtime.running = 1;
-            setTimeout(function () {
+            setTimeout(function() {
                 runtime.running = 0;
                 setting.onResize.call(klass, container);
             }, 122);
@@ -1261,7 +1219,7 @@ SOFTWARE. */
             offsetLeft: 0
         });
     */
-    Freewall.addConfig = function (newConfig) {
+    Freewall.addConfig = function(newConfig) {
         // add default setting;
         $.extend(layoutManager.defaultConfig, newConfig);
     };
@@ -1277,7 +1235,7 @@ SOFTWARE. */
             }
         });
     */
-    Freewall.createEngine = function (engineData) {
+    Freewall.createEngine = function(engineData) {
         // create new engine;
         $.extend(engine, engineData);
     };
@@ -1293,7 +1251,7 @@ SOFTWARE. */
             }
         })l
     */
-    Freewall.createPlugin = function (pluginData) {
+    Freewall.createPlugin = function(pluginData) {
         // register new plugin;
         $.extend(layoutManager.plugin, pluginData);
     };
@@ -1304,7 +1262,7 @@ SOFTWARE. */
 
         Freewall.getMethod('setBlock')(block, setting);
     */
-    Freewall.getMethod = function (method) {
+    Freewall.getMethod = function(method) {
         // get helper method;
         return layoutManager[method];
     };
