@@ -231,11 +231,12 @@
     <section id="creator">
         <div id="section3-buildYourOwnShirt" class="container-fluid">
             <div class="row">
-                <div class="col">
+                <div class="col customize-options">
                     <div class="col-xs-5">
-                        <h1> Personalize</h1>
-                        <h2>1. Choose your shirt colour!</h2>
-                        <div class="row colors">
+
+                        <h1 class="customzie"> <b>Personalize Your Shirt!</b></h1>
+                        <h2 id="title">1. Choose your shirt colour!</h2>
+                        <div class="row colors" >                           
 
                             <div class="col-xs-1">
                                 <div class="pallete" id="white" style="background-color: #ffffff;"></div>
@@ -284,26 +285,58 @@
 
                         </div>
 
-                        <h2>2. Add Photos </h2>
-                        <div class="row">
+                        
+                        <h2 id="title">2. Add Photos </h2>
+                        <div class="row file">
                             <div class="col-xs-6">
                                 <form id="uploadImg" runat="server">
                                     <input id="uploadedImg" type="file" accept="image/x-png,image/jpeg" />
-                                    <button id="use" type="button"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
-                                    <!--                                    <button class="btn"><i class="fas fa-cloud-upload-alt"></i>Upload</button>-->
+                                    <button id="use" type="button"><b><i class="fas fa-cloud-upload-alt"></i> Upload</b></button>
+
                                 </form>
                             </div>
 
                         </div>
 
-                        <h2>3. Add Text</h2>
-                        <br>
-                        <div class="row">
+                        <h2 id="title">3. Add Text</h2>
+                        <div class="row textArea">
                             <textarea class="form-control editor" id="txtArea" rows="3" cols="10" maxlength="100" placeholder="Add Text..."></textarea>
                             <button id="addtxt" type="button">Add Text</button>
 
                         </div>
-                        <h2>4. Pick your size</h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <p id="sub-title">3.1. Change Font</p>
+                            </div>
+                            <div class="col-xs-3">
+                                <select id="font-family">
+                                    <option value="Times New Roman">Times New Roman</option>
+                                    <option value="Pacifico">Pacifico</option>
+                                    <option value="VT323">VT323</option>
+                                    <option value="Quicksand">Quicksand</option>
+                                    <option value="Fancy">Fancy</option>
+                                    <option value="handWriting">Hand Writing</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row font-colors" >
+                            <div class="col-xs-5">
+                                <p id="sub-title">3.2. Select font color: </p>
+                            </div>
+                            <div class="col-xs-1">
+                             <div class="pallete " id="font-col-b" style="background-color: #000000;"></div>
+                            </div>
+
+                            <div class="col-xs-1">
+                             <div class="pallete" id="font-col-w" style="background-color: #ffffff;"></div>
+                            </div>
+ 
+                        </div>  
+                        
+                        <h2 id="title">4. Pick your size</h2>
                         <div class="row">
                             <div>
                                 <select class="styled-select blue semi-square">
@@ -322,29 +355,20 @@
                         </div>
                     </div>
                 </div>
-                <!--
-                <iframe src="https://www.rushordertees.com/design/#/"; width="1000px"; height="500px">
-                  <p>Your browser does not support iframes.</p>
-                </iframe>
-                -->
-                <!--
-                <input type="file" onchange="previewFile()"><br>
-                <img src="" height="200" alt="Image preview...">
-                -->
-
-
-
 
                 <div class="col">
                     <div class="col-xs-6">
-                        <canvas id="c" width="550" height="600"></canvas>
-                        <div class="row options">
-                            <button id="del" type="button"><b><i class="fas fa-trash-alt"></i> Delete Selection</b></button>
-                            <button id="clr" type="button"><b><i class="fas fa-eraser"></i> Clear Canvas</b></button>
-
+                        <div id="canvasBG">
+                            <canvas id="c" width="220" height="400"></canvas>
                         </div>
-                        <!--                        <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />-->
-                        <h2>Choose your Own Shirt!</h2>
+                        <div class="row options">
+                                <button id="del" type="button"><b><i class="fas fa-trash-alt"></i> Delete Selection</b></button>
+                                <button id="clr" type="button"><b><i class="fas fa-eraser"></i> Clear Canvas</b></button>
+                        </div>
+
+                        
+                        <h4 class="statement"> ** Please note the final version of your custom design will be emailed to you for approval.</h4>
+
                     </div>
                 </div>
 
@@ -354,34 +378,37 @@
                     </div>
                 </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title"><i class="fas fa-info-circle"></i> Help</h3>
-                            </div>
-                            <div class="modal-body">
-                                <p class="instruction">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h3 class="modal-title"><i class="fas fa-info-circle"></i> Help</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p class="instruction">
+                          
+                            <b>To personalize your own T-shirt:</b> <br>
+                            <b>1.</b>	Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
+                            <b>2.</b>	If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                            <b>3.</b>	If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                            <b>3.1</b> To change the font of your text, select the text object on canvas, then click select one of the fonts from the drop down list. <br>
+                            <b>3.2</b> To change the color of the font of your text, select the text object on canvas, then select on the black or white squares to select the color as your text color. <br>
+                            <b>4.</b>	If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
+                            <b>5.</b>	Select your size form the dropdown menu.<br>
+                            <b>6.</b>	Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
+                            <b>7.</b>	If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
+    
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
+                    </div>
+                  </div>
 
-                                    <b>To personalize your own T-shirt:</b> <br>
-                                    <b>1.</b> Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
-                                    <b>2.</b> If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg an .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
-                                    <b>3.</b> If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
-                                    <b>4.</b> If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
-                                    <b>5.</b> Select your size form the dropdown menu.<br>
-                                    <b>6.</b> Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
-                                    <b>7.</b> If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
-
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
-                            </div>
-                        </div>
 
                     </div>
                 </div>

@@ -76,7 +76,7 @@
 
 $.getScript("../assets/fabric.min.js", function() {
     var canvas = this.__canvas = new fabric.Canvas('c');
-    
+    var fonts = ["Pacifico", "VT323", "Quicksand", "Inconsolata"];
     var imgObj;
     document.getElementById('uploadedImg').onchange = function handleImage(e) {
         
@@ -119,7 +119,7 @@ $.getScript("../assets/fabric.min.js", function() {
 
         }
         else{
-            alert("Please select an object");
+            alert("Please select a file.");
         }
         
     });
@@ -164,47 +164,100 @@ $.getScript("../assets/fabric.min.js", function() {
     });
     
     document.getElementById("white").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/white.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/white.png')";
     });
     
     document.getElementById("blue").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/blue.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/blue.png')";
     });
     
     document.getElementById("purple").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/purple.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/purple.png')";
     });
     
     document.getElementById("pink").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/pink.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/pink.png')";
     });
 
     document.getElementById("yellow").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/yellow.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/yellow.png')";
     });
     
     document.getElementById("green").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/green.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/green.png')";
     });
 
     document.getElementById("lightGreen").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/lightGreen.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/lightGreen.png')";
     });
     
     document.getElementById("orange").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/orange.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/orange.png')";
     });
 
     document.getElementById("red").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/red.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/red.png')";
     });
 
     document.getElementById("black").addEventListener("click", function(){
-        document.getElementById("c").style.backgroundImage = "url('/Photos/shirts/black.png')";
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/black.png')";
     });
     
 
+    $.getScript("/assets/fontfaceobserver-master/fontfaceobserver-master/fontfaceobserver.js", function() {
+        document.getElementById('font-family').onchange = function() {
+          if (this.value !== 'Times New Roman') {
+            loadAndUse(this.value);
+          } else {
+            canvas.getActiveObject().set("fontFamily", this.value);
+            canvas.requestRenderAll();
+          }
+        };
 
+        function loadAndUse(font) {
+          var myfont = new FontFaceObserver(font)
+          myfont.load().then(function() {
+              // when font is loaded, use it.
+              canvas.getActiveObject().set("fontFamily", font);
+              canvas.requestRenderAll();
+            }).catch(function(e) {
+              console.log(e)
+              alert('Please select a Text.');
+            });
+        }
+    });
+    
+    document.getElementById("font-col-w").addEventListener("click", function(){
+        
+        var activeObject = canvas.getActiveObject();
+        if (activeObject) {
+            canvas.getActiveObject().setColor("#ffffff");
+            canvas.requestRenderAll();
+        }
+        else{
+            alert("Please select an Text");
+        }
+            
+        
+    });
+
+    document.getElementById("font-col-b").addEventListener("click", function(){
+        
+        var activeObject = canvas.getActiveObject();
+        if (activeObject) {
+            canvas.getActiveObject().setColor("#000000");
+            canvas.requestRenderAll();
+        }
+        else{
+            alert("Please select an Text");
+        }
+
+    });
+   
+    
+    
+    
+    
 }); 
 //
 //    

@@ -24,6 +24,46 @@
     font-weight: bold;
 } */
 
+
+@font-face {
+    font-family: "Pacifico";
+    src:    url("fonts/Pacifico.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "VT323";
+    src:    url("fonts/VT323-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src:    url("fonts/Quicksand-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    src:    url("fonts/Inconsolata-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Fancy";
+    src: url("fonts/fancy.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "handWriting";
+    src: url("fonts/handWriting.otf") format("truetype");
+}
+
+
+
+/*
+@font-face {
+  font-family: "Pacifico";
+  src: url(output-sans.woff2) format('woff2'),
+       url(output-sans.woff) format('woff');
+}
+*/
 /**** NAVBAR Styles ****/
 
 /* Default navbar color override */
@@ -174,14 +214,27 @@ div.row.popular{
 
 #section4-contactUs {
     background-color: #002040;
-    padding: 8vh
+    padding: 8vh;
 }
 
 /* End of Section Modifications */
 
-#c {
+
+.canvas-container{
+    margin: 50px auto auto 175px;
+    text-align:center;
+    border: 0.5px dashed #8A8A8A;
+    
+}
+
+#canvasBG{
+
     background-image: url(../Photos/shirts/blue.png);
     background-size: cover;
+    height: 600px;
+    width: 550px;
+    padding-top: 30px;
+
 }
 
 .pallete {
@@ -203,19 +256,22 @@ row.colours {
 
 button#addtxt {
     margin: 5px;
-    display: inline-block;
-    padding: 10px 15px;
+
+    margin-left: 10%;
+/*    display: inline-block;*/
+    padding: 6px 10px;
     font-size: 18px;
     cursor: pointer;
     text-align: center;
-    text-decoration: none;
-    outline: none;
+/*    text-decoration: none;*/
+/*    outline: none;*/
+
     color: #fff;
     background-color: #002040;
     border: none;
     border-radius: 10px;
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-
+    font-size: 16px;
 
 }
 
@@ -228,15 +284,16 @@ button#addtxt:active {
 
 }
 
-button#use {
-    margin: 5px;
-    font-size: 16px;
+
+button#use{
+    margin-top: 10px;
+    font-size: 14px;
     text-align: center;
-    color: #fff;
+    color: #002040;
     background-color: #00CCFF;
     border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
+    border-radius: 8px;
+    padding: 3px 10px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
 }
@@ -252,6 +309,7 @@ button#use:hover {
     border-radius: 5px;
     padding: 5px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin-left: 35px;
 
 }
 
@@ -264,7 +322,10 @@ button#use:hover {
 p.instruction {
     color: black;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family:sans-serif;
+    padding: 10px;
+    line-height: 1.5;
+
 }
 
 .modal-header {
@@ -272,6 +333,9 @@ p.instruction {
     color: white;
 }
 
+.modal-content{
+    width: 120%;
+}
 
 
 .closeButton {
@@ -312,11 +376,13 @@ p.instruction {
 .add2cart {
     background-color: cadetblue;
     font-size: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    margin: 10px;
+    margin: 10px auto auto 20%;
     padding: 10px;
+    width: 300px;
+    
 }
 
 /* Navbar JQuery scoll CSS */
@@ -335,6 +401,49 @@ p.instruction {
     color: black;
 }
 
+
+.statement{
+    color: red;
+    font-size: 18px;
+}
+
+.customize-options{
+    color: darkslategray;
+
+}
+#title {
+    font-size: 20px;
+    color: #075278;
+}
+
+#font-family {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+#sub-title {
+    color:#075278;
+    font-size: 14px;
+}
+
+.colors{
+    margin-left: 5px;
+}
+.file {
+    margin-left: 5px;
+}
+
+.textArea {
+    margin-left: 20px;
+}
+
+.customzie {
+    color: darkcyan;
+}
 /* Freewall GRID LAYOUT CSS */
 
 #seemore-section1 {
@@ -363,4 +472,5 @@ p.instruction {
     width: 100%;
     max-width: 100%;
     display: block;
+
 }
