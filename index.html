@@ -32,10 +32,10 @@
 
     <!-- Script for scrolling was accidentally deleted here, because it was ruining nav-bar, but should be added when fixed. -->
 
-<!--    <script type ="text/javascript" src="../JavaScript/animation.js"></script>-->
+    <!--    <script type ="text/javascript" src="../JavaScript/animation.js"></script>-->
     <script type="text/javascript" src="JavaScript/index.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    
+
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="300">
@@ -233,56 +233,58 @@
             <div class="row">
                 <div class="col customize-options">
                     <div class="col-xs-5">
+
                         <h1 class="customzie"> <b>Personalize Your Shirt!</b></h1>
                         <h2 id="title">1. Choose your shirt colour!</h2>
                         <div class="row colors" >                           
-                            
+
                             <div class="col-xs-1">
-                             <div class="pallete" id="white" style="background-color: #ffffff;"></div>
+                                <div class="pallete" id="white" style="background-color: #ffffff;"></div>
                             </div>
 
                             <div class="col-xs-1">
                                 <div class="pallete" id="blue" style="background-color: #a9c7f3;"></div>
                             </div>
                             <div class="col-xs-1">
-                             <div class="pallete" id="purple" style="background-color: #d0bfd8;"></div>
+                                <div class="pallete" id="purple" style="background-color: #d0bfd8;"></div>
                             </div>
 
                             <div class="col-xs-1">
-                             <div class="pallete" id="pink" style="background-color: #ff7cc9;"></div>
+                                <div class="pallete" id="pink" style="background-color: #ff7cc9;"></div>
                             </div>
 
                             <div class="col-xs-1">
-                             <div class="pallete" id="red" style="background-color: #ff283a;"></div>
+                                <div class="pallete" id="red" style="background-color: #ff283a;"></div>
                             </div>
 
-                            
+
                         </div>
-                        
-                        <div class="row colors" >                           
-                                
+
+                        <div class="row colors">
+
                             <div class="col-xs-1">
-                             <div class="pallete" id="orange" style="background-color: #ffc66f;"></div>
+                                <div class="pallete" id="orange" style="background-color: #ffc66f;"></div>
                             </div>
-                            
-                            
+
+
                             <div class="col-xs-1">
-                             <div class="pallete" id="yellow" style="background-color: #f5ff9c;"></div>
+                                <div class="pallete" id="yellow" style="background-color: #f5ff9c;"></div>
                             </div>
-                            
+
                             <div class="col-xs-1">
-                             <div class="pallete" id="lightGreen" style="background-color: #afefad;"></div>
+                                <div class="pallete" id="lightGreen" style="background-color: #afefad;"></div>
                             </div>
-                            
+
                             <div class="col-xs-1">
-                             <div class="pallete" id="green" style="background-color: #75a284;"></div>
+                                <div class="pallete" id="green" style="background-color: #75a284;"></div>
                             </div>
-                            
+
                             <div class="col-xs-1">
-                             <div class="pallete" id="black" style="background-color: #353535;"></div>
+                                <div class="pallete" id="black" style="background-color: #353535;"></div>
                             </div>
-                                
+
                         </div>
+
                         
                         <h2 id="title">2. Add Photos </h2>
                         <div class="row file">
@@ -290,16 +292,17 @@
                                 <form id="uploadImg" runat="server">
                                     <input id="uploadedImg" type="file" accept="image/x-png,image/jpeg" />
                                     <button id="use" type="button"><b><i class="fas fa-cloud-upload-alt"></i> Upload</b></button>
-<!--                                    <button class="btn"><i class="fas fa-cloud-upload-alt"></i>Upload</button>-->
+
                                 </form>
                             </div>
-                            
+
                         </div>
 
                         <h2 id="title">3. Add Text</h2>
                         <div class="row textArea">
                             <textarea class="form-control editor" id="txtArea" rows="3" cols="10" maxlength="100" placeholder="Add Text..."></textarea>
                             <button id="addtxt" type="button">Add Text</button>
+
                         </div>
                         <br>
                         <div class="row">
@@ -335,8 +338,8 @@
                         
                         <h2 id="title">4. Pick your size</h2>
                         <div class="row">
-                            <div >
-                                 <select class="styled-select blue semi-square">
+                            <div>
+                                <select class="styled-select blue semi-square">
                                 <option value="" disabled selected>Pick Your Size</option>
                                 <option value="xs">XS</option>
                                 <option value="s">S</option>
@@ -352,8 +355,7 @@
                         </div>
                     </div>
                 </div>
-                
-                
+
                 <div class="col">
                     <div class="col-xs-6">
                         <div id="canvasBG">
@@ -363,18 +365,19 @@
                                 <button id="del" type="button"><b><i class="fas fa-trash-alt"></i> Delete Selection</b></button>
                                 <button id="clr" type="button"><b><i class="fas fa-eraser"></i> Clear Canvas</b></button>
                         </div>
-<!--                        <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />-->
+
                         
                         <h4 class="statement"> ** Please note the final version of your custom design will be emailed to you for approval.</h4>
+
                     </div>
                 </div>
-                
+
                 <div class="col">
                     <div class="col-xs-1 info">
-                    <button class="help" id="showHelp" data-toggle="modal" data-target="#myModal"><i class="fas fa-question-circle" style="font-size:36px"></i></button>
+                        <button class="help" id="showHelp" data-toggle="modal" data-target="#myModal"><i class="fas fa-question-circle" style="font-size:36px"></i></button>
                     </div>
                 </div>
-                
+
               <!-- Modal -->
               <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -406,10 +409,12 @@
                     </div>
                   </div>
 
+
+                    </div>
                 </div>
-              </div> <!-- Modal end -->
-                
-                
+                <!-- Modal end -->
+
+
             </div>
         </div>
     </section>
@@ -481,9 +486,8 @@
                 } // End if
             });
         });
-        
     </script>
-<!--
+    <!--
     <script>
         /**
          * Listen to scroll to change header opacity class
