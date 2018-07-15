@@ -243,20 +243,21 @@ row.colours{
 
 button#addtxt {
     margin: 5px;
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 18px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #002040;
-  border: none;
-  border-radius: 10px;
+    margin-left: 10%;
+/*    display: inline-block;*/
+    padding: 6px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+/*    text-decoration: none;*/
+/*    outline: none;*/
+    color: #fff;
+    background-color: #002040;
+    border: none;
+    border-radius: 10px;
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-size: 16px;
 
-  
 }
 
 button#addtxt:hover {background-color: #13467a}
@@ -267,14 +268,14 @@ button#addtxt:active {
 }
 
 button#use{
-    margin: 5px;
-    font-size: 16px;
+    margin-top: 10px;
+    font-size: 14px;
     text-align: center;
-    color: #fff;
+    color: #002040;
     background-color: #00CCFF;
     border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
+    border-radius: 8px;
+    padding: 3px 10px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
 }
@@ -287,6 +288,7 @@ button#use:hover{background-color: #59deff }
     border-radius: 5px;
     padding: 5px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin-left: 35px;
 
 }
 
@@ -300,6 +302,8 @@ p.instruction{
     color: black;
     font-size: 16px;
     font-family:sans-serif;
+    padding: 10px;
+    line-height: 1.5;
 }
 
 .modal-header {
@@ -307,6 +311,9 @@ p.instruction{
     color: white;
 }
 
+.modal-content{
+    width: 120%;
+}
 
 
 .closeButton {
@@ -346,11 +353,13 @@ p.instruction{
 .add2cart {
     background-color:cadetblue;
     font-size: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    margin: 10px;
+    margin: 10px auto auto 20%;
     padding: 10px;
+    width: 300px;
+    
 }
 
 /* Navbar JQuery scoll CSS */
@@ -372,4 +381,42 @@ p.instruction{
 .statement{
     color: red;
     font-size: 18px;
+}
+
+.customize-options{
+    color: darkslategray;
+
+}
+#title {
+    font-size: 20px;
+    color: #075278;
+}
+
+#font-family {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+#sub-title {
+    color:#075278;
+    font-size: 14px;
+}
+
+.colors{
+    margin-left: 5px;
+}
+.file {
+    margin-left: 5px;
+}
+
+.textArea {
+    margin-left: 20px;
+}
+
+.customzie {
+    color: darkcyan;
 }

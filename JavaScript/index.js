@@ -119,7 +119,7 @@ $.getScript("../assets/fabric.min.js", function() {
 
         }
         else{
-            alert("Please select an object");
+            alert("Please select a file.");
         }
         
     });
