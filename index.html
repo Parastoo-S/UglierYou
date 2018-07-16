@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>An Uglier You</title>
-     
-
+    <title>Uglier You</title>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -41,7 +39,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!--    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>-->
+    <script src="assets/fabric.min.js"></script>
 
     <!-- Script for scrolling was accidentally deleted here, because it was ruining nav-bar, but should be added when fixed. -->
 
@@ -49,6 +48,8 @@
     <script type="text/javascript" src="JavaScript/index.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
+    <!--    Favicon-->
+    <link rel="shortcut icon" type="image/png" href="Photos/favicon.png" />
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="300">
@@ -56,7 +57,7 @@
     <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Home</a>
+            <a class="navbar-brand logo" href="index.html"><i class="fas fa-tshirt"></i> Uglier<b>You</b></a>
 
 
             <button class="navbar-toggle" data-toggle="collapse" data-target="#navbarId">
@@ -98,7 +99,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-4" id="main">
-                    <br><br>
+                    <br>
+                    <br>
 
                     <h1>Welcome to Titan</h1>
                     <p class="lead">Main information here.. Text Text Text Text Text Text Text Text Text Text
@@ -114,9 +116,6 @@
 
             </div>
 
-            <div class="container text-center">
-                <a href="#section1-shirts"><img class="chevron-down text-center" src="assets/chevron-down.png"></a>
-            </div>
         </div>
     </div>
     <div class="container">
@@ -127,6 +126,14 @@
     <!-- Content 1: Popular Shirt Options -->
     <!-- Note: The <h1>'s are placeholders for images -->
     <section class="Cool/Popular Shirts">
+        <div class="container-fluid chevron-contain">
+            <div class="row anchor-contain">
+                <div class="col-xs-1 col-centered">
+                    <a href="#section1-shirts"><img class="anchor" id="anchor-scroll" alt="Arrow Down Icon" src="Photos/chevron.png" /></a>
+                </div>
+            </div>
+        </div>
+
         <div id="section1-shirts" class="container-fluid section1">
             <div id="coolShirtsRow" class="container-fluid content coolShirts">
                 <div class="row">
@@ -266,9 +273,16 @@
                                 <div class="pallete" id="white" style="background-color: #ffffff;"></div>
                             </div>
 
+                            
                             <div class="col-xs-1">
                                 <div class="pallete" id="blue" style="background-color: #a9c7f3;"></div>
                             </div>
+                            
+                            <div class="col-xs-1">
+                                <div class="pallete" id="darkBlue" style="background-color: #3f4abc;"></div>
+                            </div>
+
+                            
                             <div class="col-xs-1">
                                 <div class="pallete" id="purple" style="background-color: #d0bfd8;"></div>
                             </div>
@@ -277,19 +291,15 @@
                                 <div class="pallete" id="pink" style="background-color: #ff7cc9;"></div>
                             </div>
 
-                            <div class="col-xs-1">
-                                <div class="pallete" id="red" style="background-color: #ff283a;"></div>
-                            </div>
-
 
                         </div>
 
                         <div class="row colors">
 
-                            <div class="col-xs-1">
-                                <div class="pallete" id="orange" style="background-color: #ffc66f;"></div>
-                            </div>
 
+                            <div class="col-xs-1">
+                                <div class="pallete" id="red" style="background-color: #ff283a;"></div>
+                            </div>
 
                             <div class="col-xs-1">
                                 <div class="pallete" id="yellow" style="background-color: #f5ff9c;"></div>
@@ -346,16 +356,16 @@
                             </div>
                         </div>
                         <br>
-                        <div class="row font-colors" >
+                        <div class="row font-colors">
                             <div class="col-xs-5">
                                 <p id="sub-title">3.2. Select font color: </p>
                             </div>
                             <div class="col-xs-1">
-                             <div class="pallete " id="font-col-b" style="background-color: #000000;"></div>
+                                <div class="pallete " id="font-col-b" style="background-color: #000000;"></div>
                             </div>
 
                             <div class="col-xs-1">
-                             <div class="pallete" id="font-col-w" style="background-color: #ffffff;"></div>
+                                <div class="pallete" id="font-col-w" style="background-color: #ffffff;"></div>
                             </div>
 
                         </div>
@@ -364,16 +374,17 @@
                         <div class="row">
                             <div>
                                 <select class="styled-select blue semi-square">
-                                <option value="" disabled selected>Pick Your Size</option>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m">M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                            </select>
+                                    <option value="" disabled selected>Pick Your Size</option>
+                                    <option value="xs">XS</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                </select>
                             </div>
                         </div>
-                        <br><br>
+                        <br>
+                        <br>
                         <div class="row ">
                             <button class="add2cart"><b><i class="fas fa-cart-plus"></i> Add to Cart</b></button>
                         </div>
@@ -386,8 +397,8 @@
                             <canvas id="c" width="220" height="400"></canvas>
                         </div>
                         <div class="row options">
-                                <button id="del" type="button"><b><i class="fas fa-trash-alt"></i> Delete Selection</b></button>
-                                <button id="clr" type="button"><b><i class="fas fa-eraser"></i> Clear Canvas</b></button>
+                            <button id="del" type="button"><b><i class="fas fa-trash-alt"></i> Delete Selection</b></button>
+                            <button id="clr" type="button"><b><i class="fas fa-eraser"></i> Clear Canvas</b></button>
                         </div>
 
 
@@ -402,9 +413,9 @@
                     </div>
                 </div>
 
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
 
                   <!-- Modal content-->
                   <div class="modal-content">
@@ -534,8 +545,6 @@
         }
     </script>
 -->
-
-
 
 </body>
 

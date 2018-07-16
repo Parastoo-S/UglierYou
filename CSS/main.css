@@ -78,6 +78,7 @@
 .navbar-inverse .navbar-nav > .active > a {
     color: rgba(0, 32, 64, 1);
     background-color: white;
+    border: 0px;
 }
 
 
@@ -88,15 +89,20 @@ a {
     color: white;
 }
 
+nav.navbar.navbar-inverse.navbar-fixed-top{
+    border:none;
+}
 /* NAV BAR STYLES END */
 
 .jumbotron {
     /*    background-color: #0E0B16;*/
-    background-image: url(../Photos/city-street-background.jpg);
+    background-image: url(../Photos/DesignsAddedV3.png);
     background-size: cover;
-    height: 100vh;
+    height: 93vh;
     margin: 0px;
     padding: 0px;
+    
+    
 }
 
 
@@ -121,8 +127,7 @@ p {
 
 
 .logo {
-    padding: 0;
-    margin: 0;
+    font-size: 25px;
 }
 
 
@@ -485,4 +490,32 @@ p.instruction {
     max-width: 100%;
     display: block;
 
+}
+
+
+/*anchor*/
+
+.anchor-contain{
+    background-color: #AEEEF5;
+/*
+    padding: 0;
+    margin: 0;
+*/
+}
+.anchor{
+    height: 30px;
+    margin-top: 10px;
+/*
+    padding: 0px;
+    margin: 0px;
+*/
+}
+
+div.container.chevron-contain {
+    background-color: #AEEEF5;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
 }
