@@ -78,7 +78,7 @@
 .navbar-inverse .navbar-nav > .active > a {
     color: rgba(0, 32, 64, 1);
     background-color: white;
-    border: none;
+    border: 0px;
 }
 
 
@@ -89,15 +89,20 @@ a {
     color: white;
 }
 
+nav.navbar.navbar-inverse.navbar-fixed-top{
+    border:none;
+}
 /* NAV BAR STYLES END */
 
 .jumbotron {
     /*    background-color: #0E0B16;*/
-    background-image: url(../Photos/DesignsAdded.png);
+    background-image: url(../Photos/DesignsAddedV3.png);
     background-size: cover;
     height: 93vh;
     margin: 0px;
     padding: 0px;
+    
+    
 }
 
 
@@ -122,8 +127,7 @@ p {
 
 
 .logo {
-    padding: 0;
-    margin: 0;
+    font-size: 25px;
 }
 
 
