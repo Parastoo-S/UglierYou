@@ -94,7 +94,7 @@ a {
     /*    background-color: #0E0B16;*/
     background-image: url(../Photos/city-street-background.jpg);
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
 }
@@ -224,7 +224,7 @@ div.row.popular{
     margin: 50px auto auto 175px;
     text-align:center;
     border: 0.5px dashed #8A8A8A;
-    
+
 }
 
 #canvasBG{
@@ -382,7 +382,7 @@ p.instruction {
     margin: 10px auto auto 20%;
     padding: 10px;
     width: 300px;
-    
+
 }
 
 /* Navbar JQuery scoll CSS */
@@ -399,6 +399,18 @@ p.instruction {
 
 .checkoutBlackText {
     color: black;
+}
+
+.chevron-down {
+    top:55vh;
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+    transform:translateY(-100%);
+    width:10%;
+    height: auto;
+    vertical-align: middle;
 }
 
 
