@@ -14,7 +14,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
     <!-- Simple cart -->
-    <script src="/assets/simpleCart.js"></script>
+<!--    <script src="/assets/simpleCart.js"></script>-->
+<!--
 	<script>
 		simpleCart({
 			checkout: { 
@@ -23,6 +24,7 @@
 			}
 		});	
 	</script>
+-->
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -467,21 +469,28 @@
                         <h2></h2>
                     </h2>
                 </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name" id="usr">
+                <form action="" method="" id="feedback-form">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" id="usr">
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your email address" id="password">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your email address" id="password">
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <textarea class="form-control" rows="3" placeholder="Message" id="comment"></textarea>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Message" id="comment"></textarea>
+                        </div>
                     </div>
+                    
+                </form>
+                <div class="col-sm-12">
+                        <button class="feedback" onclick="showSnackbar()"><b>Submit</b></button>
                 </div>
+                <div id="snackbar">Thanks for you feedback.</div>
             </div>
             <div class="col-sm-3" id="panel-right">
                 <h3>Speak with us:</h3>
@@ -492,7 +501,15 @@
                     <br> Reach us at support@UglierYou.com
 
                 </p>
+                
+                <h3>Follow us on:</h3>
+                <div class="social-media">
+                    <a id="links" href="https://github.com/UglyShirtTrio/UglierYou" target="_blank"><i class="fab fa-github"></i></a>
+                    <a id="links" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a id="links" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a id="links" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
 
+                </div>
             </div>
         </div>
         <!-- Left Panel Ends -->
@@ -522,7 +539,17 @@
             });
         });
     </script>
-   
+    <script>
+        function showSnackbar() {
+            document.getElementById("feedback-form").reset();
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            
+            
+            
+        }
+    </script>
     <!--
     <script>
         /**
