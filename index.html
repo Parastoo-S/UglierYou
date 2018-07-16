@@ -8,17 +8,28 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Uglier You</title>
 
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- Simple cart -->
+    <script src="/assets/simpleCart.js"></script>
+	<script>
+		simpleCart({
+			checkout: { 
+				type: "PayPal" , 
+				email: "you@yours.com" 
+			}
+		});	
+	</script>
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="CSS/main.css" />
+    
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -57,7 +68,7 @@
 
             <div class="collapse navbar-collapse" id="navbarId">
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Use this for drop-down if we need it 
+                    <!-- Use this for drop-down if we need it
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -101,10 +112,17 @@
                     <br><br>
                     <img class="img-responsive" src="/Photos/Hero_Photo_A.jpeg" />
                 </div>
--->
+                -->
+
             </div>
+
         </div>
     </div>
+    <div class="container">
+
+    </div>
+
+
     <!-- Content 1: Popular Shirt Options -->
     <!-- Note: The <h1>'s are placeholders for images -->
     <section class="Cool/Popular Shirts">
@@ -120,24 +138,26 @@
             <div id="coolShirtsRow" class="container-fluid content coolShirts">
                 <div class="row">
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/shirtTest1.png" />
+                        <img class="img-responsive" src="Photos/kale.png" />
                         <div class="description">
                             <!--
                         <h3 id="name"> Cool Shirt 1</h3>
-                        <p id="price">Price: $20</p>
--->
-                            <h3> Cool Shirt 1</h3>
+                        <p id="price">Price: $20</p> -->
+                            <div class="simpleCart_shelfItem">
+                            <h3 class="item_name"> Cool Shirt 1 </h3>
+                                
                             <h4>Price: $20</h4>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
+                            </div>
 
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/shirtTest1.png" />
+                        <img class="img-responsive" src="Photos/kale.png" />
                         <div class="description">
                             <h3> Cool Shirt 2</h3>
                             <h4>Price: $20</h4>
@@ -145,14 +165,14 @@
 
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/shirtTest1.png" />
+                        <img class="img-responsive" src="Photos/kale.png" />
                         <div class="description">
                             <h3> Cool Shirt 3</h3>
                             <h4>Price: $20</h4>
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/shirtTest1.png" />
+                        <img class="img-responsive" src="Photos/kale.png" />
                         <div class="description">
                             <h3> Cool Shirt 3</h3>
                             <h4>Price: $20</h4>
@@ -164,7 +184,7 @@
             <div class="container-fluid content popularShirts">
                 <div class="row">
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/10TypesOfPeople.jpg" />
+                        <img class="img-responsive" src="Photos/bruddaShirt.png" />
                         <div class="description">
                             <h3> Popular Shirt 1</h3>
                             <h4> price</h4>
@@ -177,19 +197,19 @@
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/10TypesOfPeople.jpg" />
+                        <img class="img-responsive" src="Photos/bruddaShirt.png" />
                         <div class="description">
                             <h3> Popular Shirt 2</h3>
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/10TypesOfPeople.jpg" />
+                        <img class="img-responsive" src="Photos/bruddaShirt.png" />
                         <div class="description">
                             <h3> Popular Shirt 3</h3>
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/10TypesOfPeople.jpg" />
+                        <img class="img-responsive" src="Photos/bruddaShirt.png" />
                         <div class="description">
                             <h3> Popular Shirt 3</h3>
                         </div>
@@ -247,7 +267,7 @@
 
                         <h1 class="customzie"> <b>Personalize Your Shirt!</b></h1>
                         <h2 id="title">1. Choose your shirt colour!</h2>
-                        <div class="row colors">
+                        <div class="row colors" >
 
                             <div class="col-xs-1">
                                 <div class="pallete" id="white" style="background-color: #ffffff;"></div>
@@ -397,41 +417,32 @@
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title"><i class="fas fa-info-circle"></i> Help</h3>
-                            </div>
-                            <div class="modal-body">
-                                <p class="instruction">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h3 class="modal-title"><i class="fas fa-info-circle"></i> Help</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p class="instruction">
 
-                                    <b>To personalize your own T-shirt:</b>
-                                    <br>
-                                    <b>1.</b> Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side.
-                                    <br>
-                                    <b>2.</b> If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection.
-                                    <br>
-                                    <b>3.</b> If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection.
-                                    <br>
-                                    <b>3.1</b> To change the font of your text, select the text object on canvas, then click select one of the fonts from the drop down list.
-                                    <br>
-                                    <b>3.2</b> To change the color of the font of your text, select the text object on canvas, then select on the black or white squares to select the color as your text color.
-                                    <br>
-                                    <b>4.</b> If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button.
-                                    <br>
-                                    <b>5.</b> Select your size form the dropdown menu.
-                                    <br>
-                                    <b>6.</b> Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.
-                                    <br>
-                                    <b>7.</b> If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
+                            <b>To personalize your own T-shirt:</b> <br>
+                            <b>1.</b>	Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
+                            <b>2.</b>	If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                            <b>3.</b>	If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                            <b>3.1</b> To change the font of your text, select the text object on canvas, then click select one of the fonts from the drop down list. <br>
+                            <b>3.2</b> To change the color of the font of your text, select the text object on canvas, then select on the black or white squares to select the color as your text color. <br>
+                            <b>4.</b>	If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
+                            <b>5.</b>	Select your size form the dropdown menu.<br>
+                            <b>6.</b>	Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
+                            <b>7.</b>	If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
 
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
-                            </div>
-                        </div>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
+                    </div>
+                  </div>
 
 
                     </div>
@@ -511,6 +522,7 @@
             });
         });
     </script>
+   
     <!--
     <script>
         /**
