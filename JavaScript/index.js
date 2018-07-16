@@ -1,50 +1,50 @@
-$.getScript("../assets/scrollreveal-master/dist/scrollreveal.min.js", function() {
-    
-    var config = {
-          viewFactor : 0.15,
-          duration   : 500,
-          distance   : "0px",
-          scale      : 0.8,
-    }
-    
-    
-
-    window.sr = new ScrollReveal(config)
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('.cool',{ duration: 1000, delay: 50}, 50);
-    sr.reveal('.popular',{ duration: 1000, delay: 50}, 50);
-    sr.reveal('.reviews',{ duration: 1500, delay: 50}, 50);
-    
-    
-});
- 
-$(document).ready(function () {
-    $('#main').fadeIn(1000).removeClass('hidden');
-    
-    
-    var content = document.querySelector("div.section1").offsetTop;
-    
-    window.onscroll = function() {
-        if (window.pageYOffset > 0) {
-            var opac = (window.pageYOffset / content);
-            document.getElementsByClassName("section1-container")[0].style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(../Photos/DesignsAddedV3.png) no-repeat";
-            document.getElementsByClassName("section1-container")[0].style.backgroundSize = "cover";
-
-        }
-        
-//        var navbar = document.querySelector("nav.navbar").offsetTop;
-//        if ($(window).scrollTop() >= 50) {
-//            document.getElementsByClassName("navbar")[0].style.backgroundColor = "rgba(0, 32, 64, 1)";
-//            } 
-//        else {
-//            document.getElementsByClassName("navbar")[0].style.backgroundColor ='transparent';
+//$.getScript("../assets/scrollreveal-master/dist/scrollreveal.min.js", function() {
+//    
+//    var config = {
+//          viewFactor : 0.15,
+//          duration   : 500,
+//          distance   : "0px",
+//          scale      : 0.8,
+//    }
+//    
+//    
+//
+//    window.sr = new ScrollReveal(config)
+//    window.sr = ScrollReveal({ reset: false });
+//    sr.reveal('.cool',{ duration: 1000, delay: 50}, 50);
+//    sr.reveal('.popular',{ duration: 1000, delay: 50}, 50);
+//    sr.reveal('.reviews',{ duration: 1500, delay: 50}, 50);
+//    
+//    
+//});
+// 
+//$(document).ready(function () {
+//    $('#main').fadeIn(1000).removeClass('hidden');
+//    
+//    
+//    var content = document.querySelector("div.section1").offsetTop;
+//    
+//    window.onscroll = function() {
+//        if (window.pageYOffset > 0) {
+//            var opac = (window.pageYOffset / content);
+//            document.getElementsByClassName("section1-container")[0].style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(../Photos/DesignsAddedV3.png) no-repeat";
+//            document.getElementsByClassName("section1-container")[0].style.backgroundSize = "cover";
+//
 //        }
-          
-    }
-    
-    
-    
-});
+//        
+////        var navbar = document.querySelector("nav.navbar").offsetTop;
+////        if ($(window).scrollTop() >= 50) {
+////            document.getElementsByClassName("navbar")[0].style.backgroundColor = "rgba(0, 32, 64, 1)";
+////            } 
+////        else {
+////            document.getElementsByClassName("navbar")[0].style.backgroundColor ='transparent';
+////        }
+//          
+//    }
+//    
+//    
+//    
+//});
 
 
 
@@ -165,8 +165,8 @@ $.getScript("../assets/fabric.min.js", function() {
         document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/lightGreen.png')";
     });
     
-    document.getElementById("orange").addEventListener("click", function(){
-        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/orange.png')";
+    document.getElementById("darkBlue").addEventListener("click", function(){
+        document.getElementById("canvasBG").style.backgroundImage = "url('/Photos/shirts/darkBlue.png')";
     });
 
     document.getElementById("red").addEventListener("click", function(){
