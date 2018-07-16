@@ -13,7 +13,7 @@ $.getScript("../assets/scrollreveal-master/dist/scrollreveal.min.js", function()
     window.sr = ScrollReveal({ reset: false });
     sr.reveal('.cool',{ duration: 1000, delay: 50}, 50);
     sr.reveal('.popular',{ duration: 1000, delay: 50}, 50);
-    sr.reveal('.reviews',{ duration: 2000, delay: 50}, 50);
+    sr.reveal('.reviews',{ duration: 1500, delay: 50}, 50);
     
     
 });
@@ -27,8 +27,8 @@ $(document).ready(function () {
     window.onscroll = function() {
         if (window.pageYOffset > 0) {
             var opac = (window.pageYOffset / content);
-            document.getElementsByClassName("section1-container")[0].style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(../Photos/DesignsAdded.png) no-repeat";
-            document.getElementsByClassName("section1-container")[0].style.backgroundSize = "100%";
+            document.getElementsByClassName("section1-container")[0].style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(../Photos/DesignsAddedV3.png) no-repeat";
+            document.getElementsByClassName("section1-container")[0].style.backgroundSize = "cover";
 
         }
         
