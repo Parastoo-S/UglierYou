@@ -28,7 +28,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<!--    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>-->
+    <!--    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>-->
     <script src="assets/fabric.min.js"></script>
 
     <!-- Script for scrolling was accidentally deleted here, because it was ruining nav-bar, but should be added when fixed. -->
@@ -108,14 +108,10 @@
     <!-- Content 1: Popular Shirt Options -->
     <!-- Note: The <h1>'s are placeholders for images -->
     <section class="Cool/Popular Shirts">
-        <div class="container chevron-contain">
+        <div class="container-fluid chevron-contain">
             <div class="row anchor-contain">
-                <div class="col-xs-5">
-                </div>
-                <div class="col-xs-1 text-center">
+                <div class="col-xs-1 col-centered">
                     <a href="#section1-shirts"><img class="anchor" id="anchor-scroll" alt="Arrow Down Icon" src="Photos/chevron.png" /></a>
-                </div>
-                <div class="col-xs-5">
                 </div>
             </div>
         </div>
@@ -492,8 +488,8 @@
 
     <script>
         /* Smooth Scrolling Script */
-        $(document).ready(function () {
-            $("a").on('click', function (event) {
+        $(document).ready(function() {
+            $("a").on('click', function(event) {
 
                 if (this.hash !== "") {
                     // Remove default anchor movement
@@ -504,7 +500,7 @@
 
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 800, function () {
+                    }, 800, function() {
 
                         window.location.hash = hash;
                     });
