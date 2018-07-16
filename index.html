@@ -92,7 +92,7 @@
 
                     </li>
                     <li class="nav-item">
-                        <a id="cartID2" class="nav-link"><span class="simpleCart_quantity numItemsDisabled"></span> item(s)</a>
+                        <a id="cartID2" class="nav-link" data-toggle="modal" data-target="#checkoutBox"><span class="simpleCart_quantity numItemsDisabled" ></span> item(s)</a>
                         <button id="cartID">test </button>
                     </li>
                 </ul>
@@ -100,6 +100,39 @@
         </div>
     </nav>
     <!-- End of Nav -->
+    <!-- Modal -->
+    <div class="modal fade" id="checkoutBox" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title"><i class="fas fa-info-circle"></i> Help</h3>
+                </div>
+                <div class="modal-body">
+                    <p class="instruction">
+
+                        <b>To personalize your own T-shirt:</b> <br>
+                        <b>1.</b> Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
+                        <b>2.</b> If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                        <b>3.</b> If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                        <b>3.1</b> To change the font of your text, select the text object on canvas, then click select one of the fonts from the drop down list. <br>
+                        <b>3.2</b> To change the color of the font of your text, select the text object on canvas, then select on the black or white squares to select the color as your text color. <br>
+                        <b>4.</b> If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
+                        <b>5.</b> Select your size form the dropdown menu.<br>
+                        <b>6.</b> Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
+                        <b>7.</b> If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
+
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
 
 
     <!-- MAIN BANNER -->
@@ -474,8 +507,6 @@
                                 <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
                 <!-- Modal end -->
