@@ -92,9 +92,9 @@ a {
 
 .jumbotron {
     /*    background-color: #0E0B16;*/
-    background-image: url(../Photos/city-street-background.jpg);
+    background-image: url(../Photos/DesignsAdded.png);
     background-size: cover;
-    height: 80vh;
+    height: 90vh;
     margin: 0px;
     padding: 0px;
 }
@@ -473,4 +473,19 @@ p.instruction {
     max-width: 100%;
     display: block;
 
+}
+
+
+/*anchor*/
+
+.anchor-contain{
+    background-color: #AEEEF5;
+    border: none;
+}
+.anchor{
+    height: 40px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
