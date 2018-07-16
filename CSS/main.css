@@ -24,25 +24,24 @@
     font-weight: bold;
 } */
 
-
 @font-face {
     font-family: "Pacifico";
-    src:    url("fonts/Pacifico.ttf") format('truetype');
+    src: url("fonts/Pacifico.ttf") format('truetype');
 }
 
 @font-face {
     font-family: "VT323";
-    src:    url("fonts/VT323-Regular.ttf") format('truetype');
+    src: url("fonts/VT323-Regular.ttf") format('truetype');
 }
 
 @font-face {
     font-family: "Quicksand";
-    src:    url("fonts/Quicksand-Regular.ttf") format('truetype');
+    src: url("fonts/Quicksand-Regular.ttf") format('truetype');
 }
 
 @font-face {
     font-family: "Inconsolata";
-    src:    url("fonts/Inconsolata-Regular.ttf") format('truetype');
+    src: url("fonts/Inconsolata-Regular.ttf") format('truetype');
 }
 
 @font-face {
@@ -64,6 +63,7 @@
        url(output-sans.woff) format('woff');
 }
 */
+
 /**** NAVBAR Styles ****/
 
 /* Default navbar color override */
@@ -75,7 +75,8 @@
 
 .nav.navbar-nav li a:hover,
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
-.navbar-inverse .navbar-nav > .active > a {
+.navbar-inverse .navbar-nav > .active > a,
+numItemsDisabled {
     color: rgba(0, 32, 64, 1);
     background-color: white;
     border: 0px;
@@ -89,9 +90,10 @@ a {
     color: white;
 }
 
-nav.navbar.navbar-inverse.navbar-fixed-top{
-    border:none;
+nav.navbar.navbar-inverse.navbar-fixed-top {
+    border: none;
 }
+
 /* NAV BAR STYLES END */
 
 .jumbotron {
@@ -101,8 +103,8 @@ nav.navbar.navbar-inverse.navbar-fixed-top{
     height: 93vh;
     margin: 0px;
     padding: 0px;
-    
-    
+
+
 }
 
 
@@ -224,15 +226,14 @@ div.row.popular{
 
 /* End of Section Modifications */
 
-
-.canvas-container{
+.canvas-container {
     margin: 50px auto auto 175px;
-    text-align:center;
+    text-align: center;
     border: 0.5px dashed #8A8A8A;
 
 }
 
-#canvasBG{
+#canvasBG {
 
     background-image: url(../Photos/shirts/blue.png);
     background-size: cover;
@@ -263,14 +264,13 @@ button#addtxt {
     margin: 5px;
 
     margin-left: 10%;
-/*    display: inline-block;*/
+    /*    display: inline-block;*/
     padding: 6px 10px;
     font-size: 18px;
     cursor: pointer;
     text-align: center;
-/*    text-decoration: none;*/
-/*    outline: none;*/
-
+    /*    text-decoration: none;*/
+    /*    outline: none;*/
     color: #fff;
     background-color: #002040;
     border: none;
@@ -290,7 +290,7 @@ button#addtxt:active {
 }
 
 
-button#use{
+button#use {
     margin-top: 10px;
     font-size: 14px;
     text-align: center;
@@ -327,7 +327,7 @@ button#use:hover {
 p.instruction {
     color: black;
     font-size: 16px;
-    font-family:sans-serif;
+    font-family: sans-serif;
     padding: 10px;
     line-height: 1.5;
 
@@ -338,7 +338,7 @@ p.instruction {
     color: white;
 }
 
-.modal-content{
+.modal-content {
     width: 120%;
 }
 
@@ -407,27 +407,28 @@ p.instruction {
 }
 
 .chevron-down {
-    top:55vh;
+    top: 55vh;
     position: relative;
 
     margin-left: auto;
     margin-right: auto;
-    transform:translateY(-100%);
-    width:10%;
+    transform: translateY(-100%);
+    width: 10%;
     height: auto;
     vertical-align: middle;
 }
 
 
-.statement{
+.statement {
     color: red;
     font-size: 18px;
 }
 
-.customize-options{
+.customize-options {
     color: darkslategray;
 
 }
+
 #title {
     font-size: 20px;
     color: #075278;
@@ -443,13 +444,14 @@ p.instruction {
 
 
 #sub-title {
-    color:#075278;
+    color: #075278;
     font-size: 14px;
 }
 
-.colors{
+.colors {
     margin-left: 5px;
 }
+
 .file {
     margin-left: 5px;
 }
@@ -461,6 +463,7 @@ p.instruction {
 .customzie {
     color: darkcyan;
 }
+
 /* Freewall GRID LAYOUT CSS */
 
 #seemore-section1 {
@@ -495,17 +498,18 @@ p.instruction {
 
 /*anchor*/
 
-.anchor-contain{
+.anchor-contain {
     background-color: #AEEEF5;
-/*
+    /*
     padding: 0;
     margin: 0;
 */
 }
-.anchor{
+
+.anchor {
     height: 30px;
     margin-top: 10px;
-/*
+    /*
     padding: 0px;
     margin: 0px;
 */
@@ -518,4 +522,81 @@ div.container.chevron-contain {
 .col-centered {
     float: none;
     margin: 0 auto;
+}
+
+
+.item_add {
+    color: black;
+    font-size: 120%;
+}
+
+.item_price {
+    color: black;
+    font-size: 150%;
+}
+
+.item_name {
+    color: black;
+    font-family: pacifico;
+}
+
+
+
+/* 
+MODAL BABY, IT'S A GOD DAMN MODAL, WOOOOOOOOOOOOOO.
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

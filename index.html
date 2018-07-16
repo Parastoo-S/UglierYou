@@ -12,24 +12,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+
     <!-- Simple cart -->
     <script src="/assets/simpleCart.js"></script>
-	<script>
-		simpleCart({
-			checkout: { 
-				type: "PayPal" , 
-				email: "you@yours.com" 
-			}
-		});	
-	</script>
+    <script>
+        simpleCart({
+            checkout: {
+                type: "PayPal",
+                email: "you@yours.com"
+            }
+        });
+
+    </script>
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="CSS/main.css" />
-    
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -85,11 +86,15 @@
                     <li><a href="#section4-contactUs">Contact Us</a></li>
 
                     <!-- Currently not built, leads to checkout page for now -->
-                    
-                    <li><a href="HTML/checkoutpage.html">Shopping Cart</a>
+
+
+                    <li><a href="javascript:;" class="simpleCart_checkout">Cart</a>
+
                     </li>
-                    <li> <span class="simpleCart_quantity"></span> items - </li>
-                    <li><a href=#>hello</a> </li>
+                    <li class="nav-item">
+                        <a id="cartID2" class="nav-link"><span class="simpleCart_quantity numItemsDisabled"></span> item(s)</a>
+                        <button id="cartID">test </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -105,10 +110,9 @@
                 <div class="col-xs-4" id="main">
                     <br>
                     <br>
-
-                    <h1>Welcome to Titan</h1>
-                    <p class="lead">Main information here.. Text Text Text Text Text Text Text Text Text Text
-                        <br> More Information Text Text Text Te
+                    <br>
+                    <h1>Uglier You</h1>
+                    <p class="lead">Text
                     </p>
                 </div>
                 <!--
@@ -148,38 +152,44 @@
                         <h3 id="name"> Cool Shirt 1</h3>
                         <p id="price">Price: $20</p> -->
                             <div class="simpleCart_shelfItem">
-                            <h3 class="item_name"> Cool Shirt 1 </h3>
-                                
-                            <h4>Price: $20</h4>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                                <h3 class="item_name"> Little Lamb </h3>
+                                <p>
+                                    <span class="item_price">$24.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+
                             </div>
 
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/kale.png" />
+                        <img class="img-responsive" src="Photos/65wat.png" />
                         <div class="description">
-                            <h3> Cool Shirt 2</h3>
-                            <h4>Price: $20</h4>
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name"> 65 WAT </h3>
+                                <p><span class="item_price">$17.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
                         </div>
 
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/kale.png" />
+                        <img class="img-responsive" src="Photos/awwyeah.png" />
                         <div class="description">
-                            <h3> Cool Shirt 3</h3>
-                            <h4>Price: $20</h4>
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name">Awww yeahhh!</h3>
+                                <p><span class="item_price">$23.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/kale.png" />
+                        <img class="img-responsive" src="Photos/bruddaShirt.png" />
                         <div class="description">
-                            <h3> Cool Shirt 3</h3>
-                            <h4>Price: $20</h4>
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name">Brudda, do you no da wae? </h3>
+                                <p><span class="item_price">$19.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
                         </div>
                     </div>
 
@@ -188,34 +198,45 @@
             <div class="container-fluid content popularShirts">
                 <div class="row">
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/bruddaShirt.png" />
+                        <img class="img-responsive" src="Photos/balancetotheswamp.png" />
                         <div class="description">
-                            <h3> Popular Shirt 1</h3>
-                            <h4> price</h4>
-
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name"> Balance to the Swamp</h3>
+                                <p><span class="item_price">$17.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/bruddaShirt.png" />
+                        <img class="img-responsive" src="Photos/JJ.png" />
                         <div class="description">
-                            <h3> Popular Shirt 2</h3>
+                            <div class="description">
+                                <div class="simpleCart_shelfItem">
+                                    <h3 class="item_name"> Is that a JoJo reference?</h3>
+                                    <p><span class="item_price">$18.99</span><br>
+                                        <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/bruddaShirt.png" />
+                        <img class="img-responsive" src="Photos/niceshirt.png" />
                         <div class="description">
-                            <h3> Popular Shirt 3</h3>
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name"> Nice Shirt, Fam </h3>
+                                <p><span class="item_price">$22.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-3 item-container">
-                        <img class="img-responsive" src="Photos/bruddaShirt.png" />
+                        <img class="img-responsive" src="Photos/circlepunch.png" />
                         <div class="description">
-                            <h3> Popular Shirt 3</h3>
+                            <div class="simpleCart_shelfItem">
+                                <h3 class="item_name"> GOTTEM! </h3>
+                                <p><span class="item_price">$29.99</span><br>
+                                    <a class="item_add" href="javascript:;"> Add to Cart </a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -240,6 +261,12 @@
                     <div class="col-xs-4">
                         <img class="img-responsive" src="Photos/Hero_Photo_A.jpeg" />
                         <h2>Reviewer Info 1</h2>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
                         <p class="sub_paragraph">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </p>
                     </div>
                 </div>
@@ -271,22 +298,22 @@
 
                         <h1 class="customzie"> <b>Personalize Your Shirt!</b></h1>
                         <h2 id="title">1. Choose your shirt colour!</h2>
-                        <div class="row colors" >
+                        <div class="row colors">
 
                             <div class="col-xs-1">
                                 <div class="pallete" id="white" style="background-color: #ffffff;"></div>
                             </div>
 
-                            
+
                             <div class="col-xs-1">
                                 <div class="pallete" id="blue" style="background-color: #a9c7f3;"></div>
                             </div>
-                            
+
                             <div class="col-xs-1">
                                 <div class="pallete" id="darkBlue" style="background-color: #3f4abc;"></div>
                             </div>
 
-                            
+
                             <div class="col-xs-1">
                                 <div class="pallete" id="purple" style="background-color: #d0bfd8;"></div>
                             </div>
@@ -421,32 +448,32 @@
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
 
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h3 class="modal-title"><i class="fas fa-info-circle"></i> Help</h3>
-                    </div>
-                    <div class="modal-body">
-                        <p class="instruction">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h3 class="modal-title"><i class="fas fa-info-circle"></i> Help</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p class="instruction">
 
-                            <b>To personalize your own T-shirt:</b> <br>
-                            <b>1.</b>	Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
-                            <b>2.</b>	If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
-                            <b>3.</b>	If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
-                            <b>3.1</b> To change the font of your text, select the text object on canvas, then click select one of the fonts from the drop down list. <br>
-                            <b>3.2</b> To change the color of the font of your text, select the text object on canvas, then select on the black or white squares to select the color as your text color. <br>
-                            <b>4.</b>	If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
-                            <b>5.</b>	Select your size form the dropdown menu.<br>
-                            <b>6.</b>	Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
-                            <b>7.</b>	If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
+                                    <b>To personalize your own T-shirt:</b> <br>
+                                    <b>1.</b> Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
+                                    <b>2.</b> If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                                    <b>3.</b> If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                                    <b>3.1</b> To change the font of your text, select the text object on canvas, then click select one of the fonts from the drop down list. <br>
+                                    <b>3.2</b> To change the color of the font of your text, select the text object on canvas, then select on the black or white squares to select the color as your text color. <br>
+                                    <b>4.</b> If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
+                                    <b>5.</b> Select your size form the dropdown menu.<br>
+                                    <b>6.</b> Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
+                                    <b>7.</b> If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
 
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
-                    </div>
-                  </div>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
+                            </div>
+                        </div>
 
 
                     </div>
@@ -502,6 +529,17 @@
         <!-- Left Panel Ends -->
     </section>
 
+    <!-- FOR THE MODAL -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
+
 
 
     <script>
@@ -525,30 +563,42 @@
                 } // End if
             });
         });
-    </script>
-   
-    <!--
-    <script>
-        /**
-         * Listen to scroll to change header opacity class
-         */
-        function checkScroll() {
-            var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
 
-            if ($(window).scrollTop() > startY) {
-                $('.navbar').addClass("scrolled");
-            } else {
-                $('.navbar').removeClass("scrolled");
+    </script>
+
+
+
+    <!-- FOR MODAL -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("cartID");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
         }
 
-        if ($('.navbar').length > 0) {
-            $(window).on("scroll load resize", function() {
-                checkScroll();
-            });
-        }
     </script>
--->
+
+    <!--END MODAL -->
 
 </body>
 
