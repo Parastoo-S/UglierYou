@@ -541,3 +541,7 @@ div.container.chevron-contain {
 }
 
 
+
+#cartID:hover {
+    cursor: pointer;
+}
