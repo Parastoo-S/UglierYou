@@ -11,24 +11,7 @@
     <!--<link rel="icon" href="../../../../favicon.ico"> -->
 
     <title>See More</title>
-    
-    <script src="/assets/simpleCart.js"></script>
-    <script>
-        simpleCart({
-            checkout: {
-                type: "PayPal",
-                email: "mhrgrj@gmail.com"
-            }
-            cartStyle: "table",
-            // set the currency, see the currency
-            // reference for more info
-            currency: "CAD",
-            taxRate: 1.13,
 
-        });
-
-    </script>
-    
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -61,7 +44,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand logo" href="index.html"><i class="fas fa-tshirt"></i> Uglier<b>You</b></a>
+            <a class="navbar-brand" href="../index.html">Home</a>
 
 
             <button class="navbar-toggle" data-toggle="collapse" data-target="#navbarId">
@@ -72,7 +55,7 @@
 
             <div class="collapse navbar-collapse" id="navbarId">
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Use this for drop-down if we need it
+                    <!-- Use this for drop-down if we need it 
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -83,64 +66,19 @@
                         </ul>
                     </li>
                     -->
-                    <li><a href="#section1-shirts">Top Selections</a></li>
-                    <li><a href="#section2-reviews">Reviews</a></li>
-                    <li><a href="#section3-buildYourOwnShirt">Make Your Own</a></li>
-                    <li><a href="#section4-contactUs">Contact Us</a></li>
+                    <li><a href="../index.html#section1-shirts">Top Selections</a></li>
+                    <li><a href="../index.html#section2-reviews">Reviews</a></li>
+                    <li><a href="../index.html#section3-buildYourOwnShirt">Make Your Own</a></li>
+                    <li><a href="../index.html#section4-contactUs">Contact Us</a></li>
 
                     <!-- Currently not built, leads to checkout page for now -->
-                    <li class="nav-item">
-                        <a id="cartID" class="nav-link" data-toggle="modal" data-target="#checkoutBox"><span class="simpleCart_quantity numItemsDisabled" ></span> item(s) in Cart </a>
-                    </li>
+                    <li><a href="HTML/checkoutpage.html">Shopping Cart</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Modal -->
-    <div class="modal fade" id="checkoutBox" role="dialog">
-        <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                    <h3 class="modal-title"><i class="fas fa-shopping-cart"></i> Cart</h3>
-                </div>
-
-                <div class="modal-body">
-                    <div class="simpleCart_items"></div>
-                    <!-- cart total (ex. $23.11)-->
-                    <div class="simpleCart_total"></div>
-                    <!-- cart quantity (ex. 3) -->
-                    <div class="simpleCart_quantity"></div>
-                    <!-- tax cost (ex. $1.38) -->
-                    <div class="simpleCart_tax"></div>
-                    <!-- tax rate (ex. %0.6) -->
-                    <div class="simpleCart_taxRate"></div>
-                    <!-- shipping (ex. $5.00) -->
-                    <div class="simpleCart_shipping"></div>
-                    <!-- grand total, including tax and shipping (ex. $28.49) -->
-                    <div class="simpleCart_grandTotal"></div>
-
-
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
-
-                    <a href="javascript:;" class="simpleCart_empty"> <button type="button" class= "btn btn-default clearButton" data-dismiss="modal"> <b>Clear Cart</b> </button></a>
-
-                    <button type="button" class="btn btn-default checkoutPage simpleCart_checkout">
-                    <b>Checkout</b>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal end -->
     <!-- Section 1: Grid layout -->
 
     <!--
@@ -222,7 +160,7 @@
         
         */
     </script>
-    
+
 
 </body>
 
