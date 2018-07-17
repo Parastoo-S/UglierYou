@@ -25,9 +25,9 @@
 
     <!-- Freewall JS Link + CSS  -->
     <script type="text/javascript" src="../JavaScript/freewall.js"></script>
-    
+
     <!--    Favicon-->
-    <link rel="shortcut icon" type="image/png" href="../Photos/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="../Photos/favicon.png" />
 
 
 
@@ -81,7 +81,7 @@
 
     <!-- Section 1: Grid layout -->
 
-
+    <!--
     <div id="seemore-section1" class="freewall-container">
         <div id="freewall-container">
             <div class="item brick"></div>
@@ -98,8 +98,47 @@
 
         </div>
     </div>
-    <script>
-        $(function() {
+    -->
+    <!-- Go to SEEMORE PHOTOTS and add a "0" photo -->
+    
+    <div id="freewall" class="free-wall"></div>
+
+    <script type="text/javascript">
+        var temp = "<div class='cell' style='width:{width}px; height: {height}px; background-image: url(../Photos/seemorephotos/{index})'></div>";
+        var w = 1,
+            html = '',
+            limitItem = 30;
+        for (var i = 0; i < limitItem; ++i) {
+            w = 100 + 200 * Math.random() << 0;
+            html += temp.replace(/\{height\}/g, 200).replace(/\{width\}/g, w).replace("{index}", (i % 8)  +".png");
+        }
+        $("#freewall").html(html);
+
+        var wall = new Freewall("#freewall");
+        wall.reset({
+            selector: '.cell',
+            animate: true,
+            cellW: 20,
+            cellH: 200,
+            onResize: function() {
+                wall.fitWidth();
+            }
+        });
+        wall.fitWidth();
+        // for scroll bar appear;
+        $(window).trigger("resize");
+        /*
+            var temp = "<div class='cell' style='width:{width}px; height: {height}px; background-image: url(../Photos/seemorephotos/{index}.jpg)'></div>";
+            var w = 1,
+                html = '',
+                limitItem = 49;
+            for (var i = 0; i < limitItem; ++i) {
+                w = 200 + 200 * Math.random() << 0;
+                html += temp.replace(/\{height\}/g, 200).replace(/\{width\}/g, w).replace("{index}", i + 1);
+            }
+            $("#freewall").html(html);
+            
+            
             var wall = new Freewall("#freewall-container");
             wall.fitWidth();
             
@@ -115,7 +154,11 @@
                 cellH: 200
 
             });
+            
+            wall.fitWidth();
         });
+        
+        */
     </script>
 
 
