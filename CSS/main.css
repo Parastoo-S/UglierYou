@@ -75,7 +75,8 @@
 
 .nav.navbar-nav li a:hover,
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
-.navbar-inverse .navbar-nav > .active > a {
+.navbar-inverse .navbar-nav > .active > a,
+numItemsDisabled {
     color: rgba(0, 32, 64, 1);
     background-color: white;
     border: 0px;
@@ -531,6 +532,25 @@ div.container.chevron-contain {
 }
 
 
+.item_add {
+    color: black;
+    font-size: 120%;
+}
+
+.item_price {
+    color: black;
+    font-size: 150%;
+}
+
+.item_name {
+    color: black;
+    font-family: pacifico;
+}
+
+
+
+#cartID:hover {
+    cursor: pointer;
 
 /* Grid Layout */
 
@@ -579,14 +599,14 @@ free-wall {
     left: 50%; /* Center the snackbar */
     bottom: 30px; /* 30px from the bottom */
     border-radius: 10px;
-    
+
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
 #snackbar.show {
     visibility: visible; /* Show the snackbar */
 
-/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
 However, delay the fade out process for 2.5 seconds */
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
@@ -594,7 +614,7 @@ However, delay the fade out process for 2.5 seconds */
 
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
+    from {bottom: 0; opacity: 0;}
     to {bottom: 30px; opacity: 0.8;}
 }
 
@@ -604,7 +624,7 @@ However, delay the fade out process for 2.5 seconds */
 }
 
 @-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 0.8;} 
+    from {bottom: 30px; opacity: 0.8;}
     to {bottom: 0; opacity: 0;}
 }
 
@@ -618,6 +638,6 @@ However, delay the fade out process for 2.5 seconds */
     background-color: white;
     color: black;
     padding: 5px 20px 5px 20px;
-    font-size: 18px; 
+    font-size: 18px;
     border-radius: 5px;
 }
