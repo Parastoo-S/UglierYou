@@ -213,23 +213,26 @@ div.row.popular{
 
 #section1-shirts {
     background-color: #AEEEF5;
-    padding: 10vh 8vh;
+    padding: 12vh 10vh;
 }
 
 #section2-reviews {
     background-color: #F7F0EF;
-    padding: 12vh 8vh;
+    padding: 12vh 10vh;
 }
 
 #section3-buildYourOwnShirt {
     background-color: #D9EBFF;
-    padding: 12vh 8vh;
-    margin: inherit;
+    padding: 12vh 10vh;
 }
 
 #section4-contactUs {
     background-color: #002040;
-    padding: 8vh;
+    padding: 4vh 10vh 10vh 10vh;
+}
+
+.no-padding-left{
+    padding-left: 0px;
 }
 
 /* End of Section Modifications */
