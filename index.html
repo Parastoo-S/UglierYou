@@ -22,6 +22,7 @@
                 email: "mhrgrj@gmail.com"
             }
         });
+
     </script>
 
     <!-- Bootstrap -->
@@ -104,8 +105,16 @@
                     <h3 class="modal-title"><i class="fas fa-shopping-cart"></i> Cart</h3>
                 </div>
                 <div class="modal-body">
-                    <div class="simpleCart_items"></div>
-                    <div class="simpleCart_quantity"></div>
+                    <span class="simpleCart_quantity"></span>
+                    <!--number of items in the cart-->
+                    <span class="simpleCart_total"></span>
+                    <!-- total cost of cart before tax & shipping-->
+                    <span class="simpleCart_taxRate"></span>
+                    <!--will be display as a percentage ( ie 7% )-->
+                    <span class="simpleCart_taxCost"></span>
+                    <!--taxRate X total displayed as currency-->
+                    <span class="simpleCart_finalTotal"></span>
+                    <!--total of the cart after tax & shipping -->
 
 
 
@@ -113,9 +122,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
-                    
+
                     <a href="javascript:;" class="simpleCart_empty"> <button type="button" class= "btn btn-default clearButton" data-dismiss="modal"> <b>Clear Cart</b> </button></a>
-                    
+
                     <button type="button" class="btn btn-default checkoutPage simpleCart_checkout">
                     <b>Checkout</b>
                     </button>
@@ -482,16 +491,16 @@
                             <div class="modal-body">
                                 <div class="simpleCart_items"></div>
 
-                                    <b>To personalize your own T-shirt:</b> <br>
-                                    <b>1.</b> Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
-                                    <b>2.</b> If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
-                                    <b>3.</b> If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
-                                    <b>3.1</b> To change the font of your text, select the text object on canvas, then click select one of the fonts from the drop down list. <br>
-                                    <b>3.2</b> To change the color of the font of your text, select the text object on canvas, then select on the black or white squares to select the color as your text color. <br>
-                                    <b>4.</b> If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
-                                    <b>5.</b> Select your size form the dropdown menu.<br>
-                                    <b>6.</b> Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
-                                    <b>7.</b> If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
+                                <b>To personalize your own T-shirt:</b> <br>
+                                <b>1.</b> Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
+                                <b>2.</b> If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                                <b>3.</b> If you would like to add a text to your shirt design, enter your text to the provided textbox, the click ‘Add Text’. When your text is loaded to the canvas, you will be able to resize and rotate the selection. <br>
+                                <b>3.1</b> To change the font of your text, select the text object on canvas, then click select one of the fonts from the drop down list. <br>
+                                <b>3.2</b> To change the color of the font of your text, select the text object on canvas, then select on the black or white squares to select the color as your text color. <br>
+                                <b>4.</b> If you want to remove any of the objects from the canvas, simply select the object, and click the ‘Delete’ button. <br>
+                                <b>5.</b> Select your size form the dropdown menu.<br>
+                                <b>6.</b> Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
+                                <b>7.</b> If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
 
                                 </p>
                             </div>
@@ -575,6 +584,7 @@
                 } // End if
             });
         });
+
     </script>
 
 
