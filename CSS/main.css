@@ -657,7 +657,7 @@ However, delay the fade out process for 2.5 seconds */
     color: white;
     background: #217af3;
     padding: 12px;
-    font-size: 1.5vw;
+    font-size: 16px
     border: 1px solid gray;
     box-sizing: border-box;
     border-left: none;
