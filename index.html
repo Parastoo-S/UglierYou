@@ -22,7 +22,7 @@
                 email: "mhrgrj@gmail.com"
             }
             cartStyle: "table",
-            // set the currency, see the currency 
+            // set the currency, see the currency
             // reference for more info
             currency: "CAD",
             taxRate: 1.13,
@@ -538,21 +538,28 @@
                         <h2></h2>
                     </h2>
                 </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name" id="usr">
+                <form action="" method="" id="feedback-form">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" id="usr">
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your email address" id="password">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your email address" id="password">
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <textarea class="form-control" rows="3" placeholder="Message" id="comment"></textarea>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Message" id="comment"></textarea>
+                        </div>
                     </div>
+
+                </form>
+                <div class="col-sm-12">
+                        <button class="feedback" onclick="showSnackbar()"><b>Submit</b></button>
                 </div>
+                <div id="snackbar">Thanks for you feedback.</div>
             </div>
             <div class="col-sm-3" id="panel-right">
                 <h3>Speak with us:</h3>
@@ -564,6 +571,14 @@
 
                 </p>
 
+                <h3>Follow us on:</h3>
+                <div class="social-media">
+                    <a id="links" href="https://github.com/UglyShirtTrio/UglierYou" target="_blank"><i class="fab fa-github"></i></a>
+                    <a id="links" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a id="links" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a id="links" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+
+                </div>
             </div>
         </div>
         <!-- Left Panel Ends -->
@@ -598,6 +613,17 @@
 
 
     <!-- FOR MODAL -->
+    <script>
+        function showSnackbar() {
+            document.getElementById("feedback-form").reset();
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+
+
+        }
+    </script>
     <!--
     <script>
         // Get the modal
@@ -609,7 +635,7 @@
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks the button, open the modal 
+        // When the user clicks the button, open the modal
         btn.onclick = function() {
             modal.style.display = "block";
         }
