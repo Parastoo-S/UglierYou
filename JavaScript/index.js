@@ -228,6 +228,8 @@ $.getScript("../assets/fabric.min.js", function() {
 
     });
     
+    
+
 
 }); 
 
