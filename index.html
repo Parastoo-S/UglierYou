@@ -21,6 +21,12 @@
                 type: "PayPal",
                 email: "mhrgrj@gmail.com"
             }
+            cartStyle: "table",
+            // set the currency, see the currency 
+            // reference for more info
+            currency: "CAD",
+            taxRate: 1.13,
+
         });
 
     </script>
@@ -102,23 +108,28 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+
                     <h3 class="modal-title"><i class="fas fa-shopping-cart"></i> Cart</h3>
                 </div>
+
                 <div class="modal-body">
-                    <span class="simpleCart_quantity"></span>
-                    <!--number of items in the cart-->
-                    <span class="simpleCart_total"></span>
-                    <!-- total cost of cart before tax & shipping-->
-                    <span class="simpleCart_taxRate"></span>
-                    <!--will be display as a percentage ( ie 7% )-->
-                    <span class="simpleCart_taxCost"></span>
-                    <!--taxRate X total displayed as currency-->
-                    <span class="simpleCart_finalTotal"></span>
-                    <!--total of the cart after tax & shipping -->
+                    <div class="simpleCart_items"></div>
+                    <!-- cart total (ex. $23.11)-->
+                    <div class="simpleCart_total"></div>
+                    <!-- cart quantity (ex. 3) -->
+                    <div class="simpleCart_quantity"></div>
+                    <!-- tax cost (ex. $1.38) -->
+                    <div class="simpleCart_tax"></div>
+                    <!-- tax rate (ex. %0.6) -->
+                    <div class="simpleCart_taxRate"></div>
+                    <!-- shipping (ex. $5.00) -->
+                    <div class="simpleCart_shipping"></div>
+                    <!-- grand total, including tax and shipping (ex. $28.49) -->
+                    <div class="simpleCart_grandTotal"></div>
 
 
 
-                    </p>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
@@ -489,8 +500,6 @@
                                 <h3 class="modal-title"><i class="fas fa-info-circle"></i> Cart</h3>
                             </div>
                             <div class="modal-body">
-                                <div class="simpleCart_items"></div>
-
                                 <b>To personalize your own T-shirt:</b> <br>
                                 <b>1.</b> Choose your shirt colour from the provided palette. You will see a preview of the shirt colour on the right side. <br>
                                 <b>2.</b> If you are willing to add an image as your design, select your file and click ‘Upload’. Please note that the only allowed file types are .jpeg and .png. When your image is loaded to the canvas, you will be able to resize and rotate the selection. <br>
@@ -502,7 +511,6 @@
                                 <b>6.</b> Once you are happy with your shirt design, click on the ‘Add to Cart’ button to add your shirt to the shopping cart. You will be able to proceed with purchase by selecting the shopping cart from the navigation bar.<br>
                                 <b>7.</b> If you have encountered any issues please send us a message through the ‘Contact Us’ section of our website.
 
-                                </p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
