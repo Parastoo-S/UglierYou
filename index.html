@@ -24,8 +24,8 @@
             cartStyle: "table",
             // set the currency, see the currency
             // reference for more info
-            currency: "CAD"
-//            taxRate: 0.08
+            currency: "CAD",
+            taxRate: 0.13
             
 
         });
@@ -116,12 +116,12 @@
                 </div>
 
                 <div class="cart modal-body">
-
+                    
                     <div class="simpleCart_items"></div><br><br>
                     <!-- cart total (ex. $23.11)-->
                     <div class="row">
                       <div class="col-xs-4">
-                        <p class="cartDetail">Total</p>
+                        <p class="cartDetail"><b>Total</b></p>
                       </div>
                       <div class="col-xs-6">
                         <div class="simpleCart_total"></div>
@@ -130,7 +130,7 @@
                     <!-- cart quantity (ex. 3) -->
                     <div class="row">
                       <div class="col-xs-4">
-                        <p class="cartDetail">Quantity</p>
+                        <p class="cartDetail"><b>Quantity</b></p>
                       </div>
                       <div class="col-xs-6">
                         <div class="simpleCart_quantity"></div>
@@ -140,21 +140,21 @@
                     <!-- tax cost (ex. $1.38) -->
                     <div class="row">
                       <div class="col-xs-4">
-                        <p class="cartDetail">Tax</p>
+                        <p class="cartDetail"><b>Tax Amount</b></p>
                       </div>
                       <div class="col-xs-6">
                         <div class="simpleCart_tax"></div>
                       </div>
                     </div>
-
-                    <!-- tax rate (ex. %0.6) -->
-                    <p style="color: black;">tax rate:</p>
-                    <div class="simpleCart_taxRate"></div>
-                    <!-- shipping (ex. $5.00) -->
-                    <div class="simpleCart_shipping"></div>
-                    <!-- grand total, including tax and shipping (ex. $28.49) -->
-                    <div class="simpleCart_grandTotal"></div>
                     
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <p class="cartDetail"><b>Total Amount</b></p>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="simpleCart_grandTotal"></div>
+                      </div>
+                    </div>
                                         
                 </div>
                 <div class="modal-footer">
