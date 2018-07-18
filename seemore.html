@@ -31,6 +31,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -39,6 +45,23 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script src="/assets/simpleCart.js"></script>
+    <script>
+        simpleCart({
+            checkout: {
+                type: "PayPal",
+                email: "mhrgrj@gmail.com"
+            }
+//            cartStyle: "table",
+//            // set the currency, see the currency
+//            // reference for more info
+//            currency: "CAD",
+//            taxRate: 1.13,
+
+        });
+
+    </script>
 </head>
 
 <body>
@@ -83,6 +106,47 @@
         </div>
     </nav>
 
+
+        <!-- Modal -->
+    <div id="checkoutBox" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <div class="simpleCart_items"></div>
+                    <!-- cart total (ex. $23.11)-->
+                    <div class="simpleCart_total"></div>
+                    <!-- cart quantity (ex. 3) -->
+                    <div class="simpleCart_quantity"></div>
+                    <!-- tax cost (ex. $1.38) -->
+                    <div class="simpleCart_tax"></div>
+                    <!-- tax rate (ex. %0.6) -->
+                    <div class="simpleCart_taxRate"></div>
+                    <!-- shipping (ex. $5.00) -->
+                    <div class="simpleCart_shipping"></div>
+                    <!-- grand total, including tax and shipping (ex. $28.49) -->
+                    <div class="simpleCart_grandTotal"></div>
+          </div>
+          <div class="modal-footer">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
+
+                    <a href="javascript:;" class="simpleCart_empty"> <button type="button" class= "btn btn-default clearButton" data-dismiss="modal"> <b>Clear Cart</b> </button></a>
+
+                    <button type="button" class="btn btn-default checkoutPage simpleCart_checkout">
+                    <b>Checkout</b>
+                    </button>
+                </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
     <!-- Section 1: Grid layout -->
