@@ -663,3 +663,23 @@ However, delay the fade out process for 2.5 seconds */
     border-left: none;
     float: right;
 }
+
+.cartDetail {
+    color: black;
+    font-size: 18px;
+    
+}
+
+.cart {
+    margin: 30px;
+}
+
+th.item-name, th.item-price, th.item-quantity{
+    padding-right: 80px;
+}
+
+td.item-name, td.item-price, td.item-quantity{
+    padding-right: 80px;
+    line-height: 2;
+}
+
