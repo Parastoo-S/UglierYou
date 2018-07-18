@@ -213,23 +213,26 @@ div.row.popular{
 
 #section1-shirts {
     background-color: #AEEEF5;
-    padding: 10vh 8vh;
+    padding: 12vh 10vh;
 }
 
 #section2-reviews {
     background-color: #F7F0EF;
-    padding: 12vh 8vh;
+    padding: 12vh 10vh;
 }
 
 #section3-buildYourOwnShirt {
     background-color: #D9EBFF;
-    padding: 12vh 8vh;
-    margin: inherit;
+    padding: 12vh 10vh;
 }
 
 #section4-contactUs {
     background-color: #002040;
-    padding: 8vh;
+    padding: 4vh 10vh 10vh 10vh;
+}
+
+.no-padding-left{
+    padding-left: 0px;
 }
 
 /* End of Section Modifications */
@@ -641,4 +644,22 @@ However, delay the fade out process for 2.5 seconds */
     padding: 5px 20px 5px 20px;
     font-size: 18px;
     border-radius: 5px;
+}
+
+
+.index-section3-title {
+    padding: 0 15px 20px 15px;
+}
+
+
+.btn-primary-active {
+    width: 100%;
+    color: white;
+    background: #217af3;
+    padding: 12px;
+    font-size: 16px
+    border: 1px solid gray;
+    box-sizing: border-box;
+    border-left: none;
+    float: right;
 }
