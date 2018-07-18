@@ -28,6 +28,8 @@
 
     <!--    Favicon-->
     <link rel="shortcut icon" type="image/png" href="../Photos/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
 
 
@@ -41,10 +43,10 @@
 
 <body>
 
-    <!-- Navigation -->
+       <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">Home</a>
+            <a class="navbar-brand logo" href="/index.html"><i class="fas fa-tshirt"></i> Uglier<b>You</b></a>
 
 
             <button class="navbar-toggle" data-toggle="collapse" data-target="#navbarId">
@@ -55,7 +57,7 @@
 
             <div class="collapse navbar-collapse" id="navbarId">
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Use this for drop-down if we need it 
+                    <!-- Use this for drop-down if we need it
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -66,17 +68,21 @@
                         </ul>
                     </li>
                     -->
-                    <li><a href="../index.html#section1-shirts">Top Selections</a></li>
-                    <li><a href="../index.html#section2-reviews">Reviews</a></li>
-                    <li><a href="../index.html#section3-buildYourOwnShirt">Make Your Own</a></li>
-                    <li><a href="../index.html#section4-contactUs">Contact Us</a></li>
+                    <li><a href="/index.html#section1-shirts">Top Selections</a></li>
+                    <li><a href="/index.html#section2-reviews">Reviews</a></li>
+                    <li><a href="/index.html#section3-buildYourOwnShirt">Make Your Own</a></li>
+                    <li><a href="/index.html#section4-contactUs">Contact Us</a></li>
+                    <li><a href="seemore.html">Our Catalogue</a></li>
 
                     <!-- Currently not built, leads to checkout page for now -->
-                    <li><a href="HTML/checkoutpage.html">Shopping Cart</a></li>
+                    <li class="nav-item">
+                        <a id="cartID" class="nav-link" data-toggle="modal" data-target="#checkoutBox"><span class="simpleCart_quantity numItemsDisabled" ></span> item(s) in Cart </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
 
 
     <!-- Section 1: Grid layout -->
