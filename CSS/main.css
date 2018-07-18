@@ -675,7 +675,7 @@ However, delay the fade out process for 2.5 seconds */
     margin: 30px;
 }
 
-th.item-name, th.item-price, a.simpleCart_increment{
+th.item-name, th.item-price{
     padding-right: 80px;
     
 }
@@ -687,10 +687,14 @@ a.simpleCart_remove {
     color: red;
     
 }
-td.item-name, td.item-price, a.simpleCart_increment{
+td.item-name, td.item-price{
     padding-right: 80px;
     line-height: 2;
    
+}
+
+td.item-total, th.item-total{
+    padding-left: 80px;
 }
 
 div.simplecart_items.table.th{
