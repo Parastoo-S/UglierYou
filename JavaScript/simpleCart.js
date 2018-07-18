@@ -109,7 +109,7 @@
 					shippingTotalRate		: 0,
 					shippingCustom		: null,
 
-					taxRate				: 0,
+					taxRate				: 0.13,
 					
 					taxShipping			: false,
 

@@ -19,11 +19,11 @@
                 type: "PayPal",
                 email: "mhrgrj@gmail.com"
             }
-            cartStyle: "table",
-            // set the currency, see the currency
-            // reference for more info
-            currency: "CAD",
-            taxRate: 1.13,
+//            cartStyle: "table",
+//            // set the currency, see the currency
+//            // reference for more info
+//            currency: "CAD",
+//            taxRate: 1.13,
 
         });
 
@@ -46,6 +46,12 @@
     <!--    Favicon-->
     <link rel="shortcut icon" type="image/png" href="../Photos/favicon.png" />
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -98,20 +104,18 @@
         </div>
     </nav>
 
-    <!-- Modal -->
-    <div class="modal fade" id="checkoutBox" role="dialog">
-        <div class="modal-dialog">
+        <!-- Modal -->
+    <div id="checkoutBox" class="modal fade" role="dialog">
+      <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                    <h3 class="modal-title"><i class="fas fa-shopping-cart"></i> Cart</h3>
-                </div>
-
-                <div class="modal-body">
-                    <div class="simpleCart_items"></div>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <div class="simpleCart_items"></div>
                     <!-- cart total (ex. $23.11)-->
                     <div class="simpleCart_total"></div>
                     <!-- cart quantity (ex. 3) -->
@@ -124,11 +128,8 @@
                     <div class="simpleCart_shipping"></div>
                     <!-- grand total, including tax and shipping (ex. $28.49) -->
                     <div class="simpleCart_grandTotal"></div>
-
-
-
-
-                </div>
+          </div>
+          <div class="modal-footer">
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default closeButton" data-dismiss="modal"><b>Close</b></button>
 
@@ -138,13 +139,17 @@
                     <b>Checkout</b>
                     </button>
                 </div>
-            </div>
+          </div>
         </div>
+
+      </div>
     </div>
-    <!-- Modal end -->
+    
+    
+    
     <!-- Section 1: Grid layout -->
 
-    <!--
+    
     <div id="seemore-section1" class="freewall-container">
         <div id="freewall-container">
             <div class="item brick"></div>
@@ -161,7 +166,7 @@
 
         </div>
     </div>
-    -->
+    
     <!-- Go to SEEMORE PHOTOTS and add a "0" photo -->
     
     <div id="freewall" class="free-wall"></div>
