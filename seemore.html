@@ -3,48 +3,33 @@
 
 <head>
 
-    <!-- Header Info -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!--<link rel="icon" href="../../../../favicon.ico"> -->
 
     <title>See More</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
-    <!-- CSS LINK -->
     <link href="../CSS/main.css" rel="stylesheet" type="text/css">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 
     <!-- Freewall JS Link + CSS  -->
     <script type="text/javascript" src="../JavaScript/freewall.js"></script>
 
-    <!--    Favicon-->
     <link rel="shortcut icon" type="image/png" href="../Photos/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     
     <script src="/assets/simpleCart.js"></script>
     <script>
@@ -54,12 +39,8 @@
                 email: "mhrgrj@gmail.com"
             },
             cartStyle: "table",
-            // set the currency, see the currency
-            // reference for more info
             currency: "CAD",
             taxRate: 0.13
-            
-
         });
     </script>
 </head>
@@ -80,17 +61,6 @@
 
             <div class="collapse navbar-collapse" id="navbarId">
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Use this for drop-down if we need it
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/Your/Link">Top Selections</a></li>
-                            <li><a href="/Your.Link">Reviews</a></li>
-                            <li><a href="/Your/Link">Make Your Own</a></li>
-                            <li><a href="/Your/Link">Contact Us</a></li>
-                        </ul>
-                    </li>
-                    -->
                     <li><a href="/index.html#section1-shirts">Top Selections</a></li>
                     <li><a href="/index.html#section2-reviews">Reviews</a></li>
                     <li><a href="/index.html#section3-buildYourOwnShirt">Make Your Own</a></li>
@@ -115,12 +85,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h3 class="modal-title"><i class="fas fa-shopping-cart"></i> Cart</h3>
           </div>
           <div class="cart modal-body">
                     
                     <div class="simpleCart_items"></div><br><br>
-                    <!-- cart total (ex. $23.11)-->
                     
                     <div class="row">
                       <div class="col-xs-4">
@@ -139,9 +108,6 @@
                         <div class="simpleCart_total"></div>
                       </div>
                     </div>
-                    <!-- cart quantity (ex. 3) -->
-<!--                    <div class="simpleCart_quantity"></div>-->
-                    <!-- tax cost (ex. $1.38) -->
                     <div class="row">
                       <div class="col-xs-4">
                         <p class="cartDetail"><b>Tax Amount</b></p>
@@ -178,28 +144,6 @@
     </div>
 
 
-    <!-- Section 1: Grid layout -->
-
-    <!--
-    <div id="seemore-section1" class="freewall-container">
-        <div id="freewall-container">
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-            <div class="item brick"></div>
-
-        </div>
-    </div>
-    -->
-    <!-- Go to SEEMORE PHOTOTS and add a "0" photo -->
-    
     <div id="freewall" class="free-wall"></div>
 
     <script type="text/javascript">
@@ -224,43 +168,8 @@
             }
         });
         wall.fitWidth();
-        // for scroll bar appear;
         $(window).trigger("resize");
-        /*
-            var temp = "<div class='cell' style='width:{width}px; height: {height}px; background-image: url(../Photos/seemorephotos/{index}.jpg)'></div>";
-            var w = 1,
-                html = '',
-                limitItem = 49;
-            for (var i = 0; i < limitItem; ++i) {
-                w = 200 + 200 * Math.random() << 0;
-                html += temp.replace(/\{height\}/g, 200).replace(/\{width\}/g, w).replace("{index}", i + 1);
-            }
-            $("#freewall").html(html);
-            
-            
-            var wall = new Freewall("#freewall-container");
-            wall.fitWidth();
-            
-            wall.reset({
-                selector: '.brick',
-                onResize: function() {
-                    this.fitWidth();
-
-                },
-                animate: true,
-                gutterX: 20,
-                cellW: 200,
-                cellH: 200
-
-            });
-            
-            wall.fitWidth();
-        });
-        
-        */
     </script>
-
-
 </body>
 
 </html>
